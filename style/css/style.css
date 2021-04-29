@@ -26,6 +26,7 @@ body {
   color: white;
   display: flex;
   flex-flow: row nowrap;
+  height: 90vh;
   justify-content: space-between;
   padding: 12rem 0; }
   .header__principal {
