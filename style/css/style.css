@@ -1,0 +1,98 @@
+/** Variables **/
+/** Estilos generales **/
+body {
+  background-color: black;
+  font-family: IBM Plex Mono;
+  font-style: normal;
+  margin: 0;
+  padding: 0; }
+
+.app {
+  background: #1a1a1a;
+  margin: -1.2rem 3rem 0 3rem;
+  padding: 4.2rem 3rem 3rem 3rem; }
+
+/** Imports **/
+.titulo {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: .45rem;
+  margin: 0 1rem;
+  text-transform: uppercase; }
+
+.header {
+  align-items: center;
+  color: white;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 12rem 0; }
+  .header__principal {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding-left: 7.5rem;
+    padding-top: 7.5rem; }
+  .header__saludoInicial {
+    font-size: 5rem;
+    font-weight: 500;
+    line-height: 5rem;
+    margin: .5rem 0;
+    letter-spacing: .3rem; }
+    .header__saludoInicial--hola {
+      margin-left: .5rem; }
+  .header__saludoInicialCopete {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 2rem;
+    margin: 1rem 0;
+    width: 78%; }
+  .header__botonContactoLink:link {
+    color: #2BEBC8;
+    text-decoration: none; }
+  .header__botonContactoLink:visited {
+    color: #2BEBC8; }
+  .header__botonContacto {
+    background: transparent;
+    border: solid 1.5px #2BEBC8;
+    border-radius: 2rem;
+    font-size: .9rem;
+    height: 3.5rem;
+    margin: 1.5rem 0;
+    text-transform: uppercase;
+    width: 11rem; }
+  .header__scrollDownLink {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    height: 1.5rem;
+    margin: 7rem 0 0 -4.5rem;
+    transform: rotate(90deg);
+    width: 9rem; }
+    .header__scrollDownLink:link {
+      color: white;
+      text-decoration: none; }
+    .header__scrollDownLink:visited {
+      color: white; }
+  .header__scrollDown {
+    margin-bottom: .5rem;
+    font-weight: 300; }
+  .header__flechaIcono {
+    height: 1.5rem;
+    transform: rotate(-90deg); }
+  .header__profesional {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 0 1rem 8rem; }
+  .header__profesionalIconos {
+    margin: .5rem; }
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  :root {
+    font-size: 14px; } }
+
+@media (min-width: 1400px) {
+  :root {
+    font-size: 14px; } }

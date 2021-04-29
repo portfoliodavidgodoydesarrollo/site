@@ -1,0 +1,88 @@
+.header 
+    align-items: center
+    color: white
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    padding: 12rem 0
+
+    &__principal
+        display: flex
+        flex-flow: column nowrap
+        justify-content: center
+        padding-left: 7.5rem
+        padding-top: 7.5rem
+
+    &__saludoInicial 
+        font-size: 5rem   
+        font-weight: 500
+        line-height: 5rem
+        margin: .5rem 0
+        letter-spacing: .3rem
+
+        &--hola 
+            margin-left: .5rem
+
+
+    &__saludoInicialCopete 
+        font-size: 2rem
+        font-weight: 300
+        line-height: 2rem
+        margin: 1rem 0
+        width: 78%
+
+
+    &__botonContactoLink
+        &:link  
+            color: $secondary
+            text-decoration: none   
+        &:visited    
+            color: $secondary  
+
+    &__botonContacto 
+        background: transparent
+        border: solid 1.5px $secondary
+        border-radius: 2rem
+        font-size: .9rem    
+        height: 3.5rem   
+        margin: 1.5rem 0 
+        text-transform: uppercase
+        width: 11rem
+
+
+    &__scrollDownLink 
+        align-items: center
+        display: flex
+        flex-flow: row nowrap
+        justify-content: space-between    
+        height: 1.5rem    
+        margin: 7rem 0 0 -4.5rem
+        transform: rotate(90deg)
+        width: 9rem
+
+        &:link 
+            color: white
+            text-decoration: none
+
+        &:visited 
+            color: white
+
+
+    &__scrollDown 
+        margin-bottom: .5rem
+        font-weight: 300
+
+
+    &__flechaIcono 
+        height: 1.5rem
+        transform: rotate(-90deg)
+
+
+    &__profesional 
+        display: flex
+        flex-flow: column nowrap
+        padding: 0 1rem 8rem
+
+
+    &__profesionalIconos 
+        margin: .5rem
