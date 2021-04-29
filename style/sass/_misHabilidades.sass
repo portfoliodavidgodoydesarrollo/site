@@ -1,0 +1,52 @@
+.misHabilidades
+    align-items: start
+    color: white
+    display: flex
+    flex-flow: row nowrap
+    height: 90vh
+    justify-content: start
+    padding-top: 7.5rem
+    padding-left: 7.5rem 
+
+    &__cuerpo
+        display: flex
+        flex-flow: column nowrap
+
+    &__titulo
+        font-size: 3rem   
+        font-weight: 500
+        line-height: 3rem
+        margin: .5rem 0
+        letter-spacing: .3rem
+    
+    &__parrafo
+        font-size: 1.25rem
+        font-weight: 300
+        line-height: 1.5rem
+        margin: 1rem 0
+        width: 90%
+
+        &--verde
+            color: $secondary
+
+    &__botonHablemos
+        background: transparent
+        border: solid 1.5px $secondary
+        border-radius: 2rem
+        font-size: 1rem    
+        height: 3.5rem   
+        line-height: 3.5rem
+        margin: 2rem 0 
+        text-align: center
+        text-transform: uppercase
+        width: 11rem
+        
+        &:link  
+            color: $secondary
+            text-decoration: none   
+        &:visited    
+            color: $secondary  
+
+    &__imagen
+        margin-left: -2rem
+        max-width: 50%
