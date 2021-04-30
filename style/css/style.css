@@ -19,7 +19,9 @@ body {
   font-weight: 300;
   letter-spacing: .45rem;
   margin: 0 1rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2; }
 
 .header {
   align-items: center;
@@ -28,7 +30,9 @@ body {
   flex-flow: row nowrap;
   height: 90vh;
   justify-content: space-between;
-  padding: 25vh 0; }
+  padding: 25vh 0;
+  position: relative;
+  z-index: 2; }
   .header__principal {
     display: flex;
     flex-flow: column nowrap;
@@ -100,7 +104,9 @@ body {
   height: 90vh;
   justify-content: start;
   padding-top: 7.5rem;
-  padding-left: 7.5rem; }
+  padding-left: 7.5rem;
+  position: relative;
+  z-index: 2; }
   .miPortfolio__titulo {
     font-size: 3rem;
     font-weight: 500;
@@ -125,7 +131,9 @@ body {
   height: 90vh;
   justify-content: start;
   padding-top: 7.5rem;
-  padding-left: 7.5rem; }
+  padding-left: 7.5rem;
+  position: relative;
+  z-index: 2; }
   .sobreMi__cuerpo {
     display: flex;
     flex-flow: column nowrap; }
@@ -196,7 +204,9 @@ body {
   flex-flow: row nowrap;
   height: 90vh;
   justify-content: start;
-  padding: 7.5rem 0 7.5rem 7.5rem; }
+  padding: 7.5rem 0 7.5rem 7.5rem;
+  position: relative;
+  z-index: 2; }
   .misHabilidades__cuerpo {
     display: flex;
     flex-flow: column nowrap; }
@@ -238,7 +248,8 @@ body {
   bottom: 3rem;
   position: fixed;
   right: 6rem;
-  transition: transform .5s; }
+  transition: transform .5s;
+  z-index: 2; }
   .whatsapp:hover {
     animation: "whatsapp" ease;
     transform: scale(1.2); }
@@ -249,12 +260,13 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 0; }
+  position: relative;
+  z-index: 1; }
   .background__leftline {
-    left: 9rem;
-    height: 420vh;
+    left: 2vw;
+    height: 400vh;
     position: absolute;
-    top: 33rem; }
+    top: 60vh; }
 
 @media (min-width: 1200px) and (max-width: 1400px) {
   :root {
