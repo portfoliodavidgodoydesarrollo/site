@@ -28,7 +28,7 @@ body {
   flex-flow: row nowrap;
   height: 90vh;
   justify-content: space-between;
-  padding: 12rem 0; }
+  padding: 25vh 0; }
   .header__principal {
     display: flex;
     flex-flow: column nowrap;
@@ -196,8 +196,7 @@ body {
   flex-flow: row nowrap;
   height: 90vh;
   justify-content: start;
-  padding-top: 7.5rem;
-  padding-left: 7.5rem; }
+  padding: 7.5rem 0 7.5rem 7.5rem; }
   .misHabilidades__cuerpo {
     display: flex;
     flex-flow: column nowrap; }
@@ -235,6 +234,28 @@ body {
     margin-left: -2rem;
     max-width: 50%; }
 
+.whatsapp {
+  bottom: 3rem;
+  position: fixed;
+  right: 6rem;
+  transition: transform .5s; }
+  .whatsapp:hover {
+    animation: "whatsapp" ease;
+    transform: scale(1.2); }
+
+.background {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0; }
+  .background__leftline {
+    left: 9rem;
+    height: 420vh;
+    position: absolute;
+    top: 33rem; }
+
 @media (min-width: 1200px) and (max-width: 1400px) {
   :root {
     font-size: 14px; } }
@@ -242,3 +263,9 @@ body {
 @media (min-width: 1400px) {
   :root {
     font-size: 14px; } }
+
+@keyframes whatsapp {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.2); } }
