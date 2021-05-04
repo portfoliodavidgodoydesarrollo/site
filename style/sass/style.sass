@@ -15,8 +15,11 @@ body
     
 .app
   background: $primary
+  display: grid
+  grid-template-rows: 5rem 1fr repeat( 3 , minmax(80vh, 90vh) )  
   margin: -1.2rem 3rem 0 3rem
   padding: 4.2rem 3rem 3rem 3rem
+  
 
 /** Imports **/
 
@@ -26,6 +29,7 @@ body
 @import "sobreMi"
 @import "misHabilidades"
 @import "contacto"
+@import "footer"
 @import "whatsapp"
 
 @import "background"

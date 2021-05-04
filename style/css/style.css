@@ -9,6 +9,8 @@ body {
 
 .app {
   background: #1a1a1a;
+  display: grid;
+  grid-template-rows: 5rem 1fr repeat(3, minmax(80vh, 90vh));
   margin: -1.2rem 3rem 0 3rem;
   padding: 4.2rem 3rem 3rem 3rem; }
 
@@ -17,6 +19,7 @@ body {
   color: white;
   font-size: 1.2rem;
   font-weight: 300;
+  grid-row: 1 / 2;
   letter-spacing: .45rem;
   margin: 0 1rem;
   text-transform: uppercase;
@@ -28,6 +31,7 @@ body {
   color: white;
   display: flex;
   flex-flow: row nowrap;
+  grid-row: 2 / 3;
   height: 90vh;
   justify-content: space-between;
   padding: 25vh 0;
@@ -101,6 +105,7 @@ body {
   color: white;
   display: flex;
   flex-flow: column nowrap;
+  grid-row: 3 / 4;
   height: 90vh;
   justify-content: start;
   padding-top: 7.5rem;
@@ -121,22 +126,22 @@ body {
     width: 78%; }
   .miPortfolio__cuerpo {
     display: flex;
-    flex-flow: row nowrap; }
+    flex-flow: row wrap; }
 
 .sobreMi {
-  align-items: start;
   color: white;
-  display: flex;
-  flex-flow: row nowrap;
+  display: grid;
+  grid-row: 4 / 5;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 8rem 1fr;
   height: 90vh;
-  justify-content: start;
   padding-top: 7.5rem;
   padding-left: 7.5rem;
   position: relative;
   z-index: 2; }
-  .sobreMi__cuerpo {
-    display: flex;
-    flex-flow: column nowrap; }
+  .sobreMi__titulos {
+    grid-column: 1/2;
+    grid-row: 1/2; }
   .sobreMi__titulo {
     font-size: 3rem;
     font-weight: 500;
@@ -147,6 +152,11 @@ body {
     align-items: center;
     display: flex;
     flex-flow: ron nowrap; }
+  .sobreMi__cuerpo {
+    display: flex;
+    flex-flow: column nowrap;
+    grid-column: 1/2;
+    grid-row: 2/2; }
   .sobreMi__descargaCvTexto {
     color: #6846ED;
     font-size: 1.5rem;
@@ -161,16 +171,19 @@ body {
     border-radius: 2rem;
     color: white;
     display: flex;
-    gap: .5rem;
+    gap: .5em;
     flex-flow: row nowrap;
-    height: 2rem;
+    height: 2em;
     justify-content: center;
-    margin: 0 1rem;
-    width: 30%; }
+    margin: 0 2rem;
+    padding: .1em 2em;
+    width: 15%; }
     .sobreMi__descargaCvBoton:link {
       text-decoration: none; }
   .sobreMi__descargaCvBotonTexto {
     margin: 0; }
+  .sobreMi__descargaCvBotonIcon {
+    max-height: 80%; }
   .sobreMi__parrafo {
     font-size: 1.25rem;
     font-weight: 300;
@@ -194,14 +207,29 @@ body {
     .sobreMi__botonLinkedIn:visited {
       color: #2BEBC8; }
   .sobreMi__imagen {
-    margin-top: 1rem;
-    max-width: 47%; }
+    grid-column: 2/3;
+    grid-row: 1/3;
+    margin: 1rem auto 0;
+    max-width: 50%;
+    min-width: 36rem; }
+
+@media (max-width: 768px) {
+  .sobreMi {
+    grid-template-columns: 1fr;
+    grid-template-rows: 8rem repeat(2, 1fr); }
+    .sobreMi__cuerpo {
+      grid-column: 1/2;
+      grid-row: 3/4; }
+    .sobreMi__imagen {
+      grid-column: 1/2;
+      grid-row: 2/3; } }
 
 .misHabilidades {
-  align-items: start;
   color: white;
-  display: flex;
-  flex-flow: row nowrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 4rem 1fr;
+  grid-row: 5 / 6;
   height: 90vh;
   justify-content: start;
   padding: 7.5rem 0 7.5rem 7.5rem;
@@ -209,10 +237,14 @@ body {
   z-index: 2; }
   .misHabilidades__cuerpo {
     display: flex;
-    flex-flow: column nowrap; }
+    flex-flow: column nowrap;
+    grid-column: 1/2;
+    grid-row: 2/2; }
   .misHabilidades__titulo {
     font-size: 3rem;
     font-weight: 500;
+    grid-column: 1/2;
+    grid-row: 1/2;
     line-height: 3rem;
     margin: .5rem 0;
     letter-spacing: .3rem; }
@@ -241,15 +273,160 @@ body {
     .misHabilidades__botonHablemos:visited {
       color: #2BEBC8; }
   .misHabilidades__imagen {
-    margin-left: -2rem;
-    max-width: 50%; }
+    grid-column: 2/3;
+    grid-row: 1/3;
+    margin: 1rem auto 0;
+    max-width: 50%;
+    min-width: 36rem; }
+
+@media (max-width: 768px) {
+  .misHabilidades {
+    grid-template-columns: 1fr;
+    grid-template-rows: 8rem repeat(2, 1fr); }
+    .misHabilidades__cuerpo {
+      grid-column: 1/2;
+      grid-row: 3/4; }
+    .misHabilidades__imagen {
+      grid-column: 1/2;
+      grid-row: 2/3; } }
+
+.contacto {
+  height: 70vh;
+  margin-top: 10rem;
+  padding: 10vh, 0;
+  z-index: 3; }
+  .contacto__background {
+    align-items: center;
+    background: url("../../assets/backgroundElements/mapa.svg") repeat no-repeat;
+    display: flex;
+    flex-flow: row wrap-reverse;
+    height: 70vh;
+    justify-content: space-evenly;
+    padding: 0 6%; }
+  .contacto__cuerpo {
+    display: flex;
+    flex-basis: 45%;
+    flex-grow: 1;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 75%;
+    padding-top: 4%; }
+  .contacto__gMapsBoton {
+    align-items: center;
+    background: #989898;
+    border-radius: 5px;
+    display: flex;
+    gap: 1rem;
+    flex-flow: row nowrap;
+    font-size: 1rem;
+    height: 2rem;
+    justify-content: center;
+    opacity: .8;
+    padding: .3em 2em;
+    width: 15rem; }
+    .contacto__gMapsBoton:link {
+      color: white;
+      text-decoration: none; }
+    .contacto__gMapsBoton:visited {
+      color: white; }
+  .contacto__gMapsBotonTexto {
+    line-height: 2rem;
+    margin: 0; }
+  .contacto__titulo {
+    color: white;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 3rem; }
+  .contacto__form {
+    background: #EFEFEF;
+    border-radius: 10px;
+    flex-basis: 55%;
+    flex-grow: 1;
+    position: relative;
+    top: 3vh; }
+  .contacto__fieldset {
+    display: flex;
+    border: none;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    height: 60vh;
+    margin: 3.5rem; }
+  .contacto__legend {
+    color: #848484;
+    font-size: .8rem; }
+  .contacto__inputText {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #828282;
+    color: #4F4F4F;
+    font-size: 1.2rem;
+    line-height: 2rem; }
+  .contacto__inputBoton {
+    align-items: center;
+    background: #2BEBC8;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 1rem;
+    gap: .5rem;
+    justify-content: center;
+    line-height: 1.6rem;
+    max-width: 20rem;
+    padding: 1.2em 3em;
+    position: relative;
+    right: -21vw;
+    top: 3.7rem; }
+  .contacto__inputBotonIcon {
+    display: none;
+    height: 1.5rem; }
+
+@media (max-width: 768px) {
+  .contacto__gMapsBoton {
+    display: none; }
+  .contacto__inputBotonIcon {
+    display: inline-block; } }
+
+.footer {
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 15rem 5rem;
+  grid-template-rows: 2fr 1fr 1fr;
+  height: 50vh;
+  padding-left: 3rem; }
+  .footer__localidad {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: .7rem;
+    grid-column: 1/2;
+    grid-row: 1/2; }
+  .footer__datos {
+    display: flex;
+    flex-flow: column nowrap;
+    font-size: 1.1rem;
+    gap: .7rem;
+    grid-column: 1/2;
+    grid-row: 2/4; }
+  .footer__copyright {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 1.1rem;
+    gap: .7rem;
+    grid-column: 2/3;
+    grid-row: 3/4; }
+  .footer__scrollUpLink {
+    grid-column: 3/4;
+    grid-row: 1/4; }
 
 .whatsapp {
   bottom: 3rem;
   position: fixed;
   right: 6rem;
   transition: transform .5s;
-  z-index: 2; }
+  z-index: 4; }
   .whatsapp:hover {
     animation: "whatsapp" ease;
     transform: scale(1.2); }
@@ -260,19 +437,45 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
-  position: relative;
   z-index: 1; }
   .background__leftline {
-    left: 2vw;
+    left: 8vw;
     height: 400vh;
     position: absolute;
-    top: 60vh; }
+    top: 70vh; }
+  .background__circle {
+    left: 7.9vw;
+    position: absolute; }
+    .background__circle--1 {
+      top: 70vh; }
+    .background__circle--2 {
+      top: 184vh; }
+    .background__circle--3 {
+      top: 264vh; }
+    .background__circle--4 {
+      top: 340vh; }
   .background__malla {
-    left: 6vw;
+    left: 10vw;
     max-height: 75vh;
     max-width: 90%;
     position: absolute;
     top: 25vh; }
+
+@media (max-width: 576px) {
+  :root {
+    font-size: 8px; } }
+
+@media (min-width: 576px) and (max-width: 768px) {
+  :root {
+    font-size: 10px; } }
+
+@media (min-width: 768px) and (max-width: 992px) {
+  :root {
+    font-size: 10px; } }
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  :root {
+    font-size: 12px; } }
 
 @media (min-width: 1200px) and (max-width: 1400px) {
   :root {
@@ -280,7 +483,7 @@ body {
 
 @media (min-width: 1400px) {
   :root {
-    font-size: 14px; } }
+    font-size: 16px; } }
 
 @keyframes whatsapp {
   from {

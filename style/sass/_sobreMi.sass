@@ -1,18 +1,18 @@
 .sobreMi
-    align-items: start
     color: white
-    display: flex
-    flex-flow: row nowrap
+    display: grid
+    grid-row: 4 / 5
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: 8rem 1fr                        
     height: 90vh
-    justify-content: start
     padding-top: 7.5rem
     padding-left: 7.5rem 
     position: relative
     z-index: 2
 
-    &__cuerpo
-        display: flex
-        flex-flow: column nowrap
+    &__titulos       
+        grid-column: 1/2 
+        grid-row: 1/2
 
     &__titulo
         font-size: 3rem   
@@ -25,6 +25,12 @@
         align-items: center
         display: flex
         flex-flow: ron nowrap
+
+    &__cuerpo
+        display: flex
+        flex-flow: column nowrap
+        grid-column: 1/2 
+        grid-row: 2/2
 
     &__descargaCvTexto
         color: $tertiary
@@ -41,12 +47,13 @@
         border-radius: 2rem
         color: white
         display: flex
-        gap: .5rem
+        gap: .5em
         flex-flow: row nowrap
-        height: 2rem
+        height: 2em
         justify-content: center
-        margin: 0 1rem
-        width: 30%
+        margin: 0 2rem
+        padding: .1em 2em
+        width: 15%
 
         &:link  
             text-decoration: none   
@@ -55,7 +62,8 @@
         margin: 0
 
     &__descargaCvBotonIcon
-    
+        max-height: 80%
+
     &__parrafo
         font-size: 1.25rem
         font-weight: 300
@@ -81,6 +89,23 @@
         &:visited    
             color: $secondary  
 
-    &__imagen
-        margin-top: 1rem
-        max-width: 47%
+    &__imagen   
+        grid-column: 2/3 
+        grid-row: 1/3
+        margin: 1rem auto 0
+        max-width: 50%
+        min-width: 36rem
+
+
+@media (max-width: 768px) 
+    .sobreMi
+        grid-template-columns: 1fr
+        grid-template-rows: 8rem repeat(2, 1fr)       
+
+        &__cuerpo
+            grid-column: 1/2
+            grid-row: 3/4    
+
+        &__imagen               
+            grid-column: 1/2 
+            grid-row: 2/3
