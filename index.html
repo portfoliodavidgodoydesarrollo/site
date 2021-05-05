@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8" />
@@ -17,27 +17,28 @@
 </head>
 
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
   <div class="app">
     <div class="background">
-      <img class="background__leftline" src="assets/backgroundElements/leftLine.svg" alt="leftLine">
-      <img src="assets/backgroundElements/circle.svg" alt="circle" class="background__circle background__circle--1">
-      <img src="assets/backgroundElements/circle.svg" alt="circle" class="background__circle background__circle--2">
-      <img src="assets/backgroundElements/circle.svg" alt="circle" class="background__circle background__circle--3">
-      <img src="assets/backgroundElements/circle.svg" alt="circle" class="background__circle background__circle--4">
-      <img src="assets/backgroundElements/geometrics.svg" alt="geometria" class="background__cuerposGeometricos">
-      <img src="assets/backgroundElements/malla.svg" alt="malla" class="background__malla">
+      <img src="assets/backgroundElements/blackCircle_1_desktop.svg" alt="black circle" class="background__blackCircle background__blackCircle--1desktop">
+      <img src="assets/backgroundElements/blackCircle_2_desktop.svg" alt="black circle" class="background__blackCircle background__blackCircle--2desktop">
+      <img src="assets/backgroundElements/blackCircle_1_mobile.svg" alt="black circle" class="background__blackCircle background__blackCircle--1mobile">
+      <img src="assets/backgroundElements/blackCircle_2_mobile.svg" alt="black circle" class="background__blackCircle background__blackCircle--2mobile">
+      <img src="assets/backgroundElements/malla_desktop.svg" alt="malla" class="background__malla background__malla--desktop">
+      <img src="assets/backgroundElements/malla_mobile.svg" alt="malla" class="background__malla background__malla--mobile">
+      <img src="assets/backgroundElements/points.svg" alt="puntos" class="background__puntos">
+      <img src="assets/backgroundElements/geometrics_desktop.svg" alt="geometria" class="background__cuerposGeometricos background__cuerposGeometricos--desktop">
+      <img src="assets/backgroundElements/geometrics_mobile.svg" alt="geometria" class="background__cuerposGeometricos background__cuerposGeometricos--mobile">
     </div>
-    <h1 class="titulo">David Godoy</h1>
+    <h1 id="pageTop" class="titulo">David Godoy</h1>
     <header class="header">
       <div class="header__principal">
         <p class="header__saludoInicial header__saludoInicial--hola">¡Hola!</p>
-        <p class="header__saludoInicial">Me llamo <img src="assets/icons/letraDInicio.svg" alt="D">avid</p>
+        <p class="header__saludoInicial">Me llamo <span class="header__david"><img class="header__letraDInicio" src="assets/icons/letraDInicio.svg" alt="D">avid</span></p>
         <p class="header__subSaludoInicial">Soy desarrollador web, si querés un trabajo creativo
           y con un código limpio, te invito a contactarme</p>
 
         <a class="header__botonContacto" href="#">Contacto</a>
-        <a class="header__scrollDownLink" href="#">
+        <a class="header__scrollDownLink" href="#pageBottom">
           <span class="header__scrollDown">scroll down</span>
           <img class="header__flechaIcono" src="assets/icons/arrow_icon_v.svg" alt="scroll down">
         </a>
@@ -55,7 +56,32 @@
       <h2 class="miPortfolio__titulo">Mi Portafolio</h2>
       <p class="miPortfolio__subtitulo">Hace poco emprendí este viaje del código. Pude construir y mejorar interfaces de
         e-commerce y otros proyectos personales.</p>
-      <div class="miPortfolio__cuerpo"></div>
+      <div class="miPortfolio__cuerpo">
+        <div class="miPortfolio__card miPortfolio__card--down">
+          <div class="miPortfolio__cardGradient">
+            <a class="miPortfolio__cardLink" href="#">
+              <p class="miPortfolio__cardText">CONOCER MAS</p>
+              <img class="miPortfolio__cardIcon" src="./assets/icons/arrow_up_card.svg" alt="conocer mas">
+            </a>
+          </div>
+        </div>
+        <div class="miPortfolio__card miPortfolio__card--up">
+          <div class="miPortfolio__cardGradient">
+            <a class="miPortfolio__cardLink" href="#">
+              <p class="miPortfolio__cardText">CONOCER MAS</p>
+              <img class="miPortfolio__cardIcon" src="./assets/icons/arrow_up_card.svg" alt="conocer mas">
+            </a>
+          </div>
+        </div>
+        <div class="miPortfolio__card miPortfolio__card--down">
+          <div class="miPortfolio__cardGradient">
+            <a class="miPortfolio__cardLink" href="#">
+              <p class="miPortfolio__cardText">CONOCER MAS</p>
+              <img class="miPortfolio__cardIcon" src="./assets/icons/arrow_up_card.svg" alt="conocer mas">
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="sobreMi">
       <div class="sobreMi__titulos">
@@ -115,20 +141,28 @@
         </form>
       </div>
     </section> 
-    <footer class="footer">
+    <footer id="pageBottom" class="footer">
       <p class="footer__localidad"><img class="footer__localidadIcon" src="assets/icons/ubicacion.svg" alt="ubicacion">Buenos Aires, Lanús</p>
       <div class="footer__datos">
-        <p class="footer__dato">CONTACTO</p>
+        <p class="footer__dato footer__dato--contacto">CONTACTO</p>
         <p class="footer__dato">davidgodoy89@gmail.com</p>
         <p class="footer__dato">+54 9 11 4039-8584</p>
       </div>
       <p class="footer__copyright"><img class="footer__copyrightIcon" src="assets/icons/copyright.svg" alt="copyright">2021 David Godoy</p>
+      <div class="footer__profesional">
+        <a href="#">
+          <img class="footer__profesionalIconos" src="assets/icons/github_icon.svg" alt="github">
+        </a>
+        <a href="#">
+          <img class="footer__profesionalIconos" src="assets/icons/linkedin_icon.svg" alt="linkedin">
+        </a>
+      </div>
       <a class="footer__scrollUpLink" href="#">
-        <span class="footer__scrollUp">scroll up</span>
+        <span class="footer__scrollUp">Arriba</span>
         <img class="footer__flechaIcono" src="assets/icons/arrow_icon_v.svg" alt="scroll down">
       </a>
     </footer>
-    <a class="whatsapp" href="#"><img src="assets/icons/whtasapp_icon.svg" alt="whtasapp"></a>
+    <a class="whatsapp" href="#pageTop"><img class="whatsapp__imagen" src="assets/icons/whtasapp_icon.svg" alt="whtasapp"></a>
   </div>
 </body>
 

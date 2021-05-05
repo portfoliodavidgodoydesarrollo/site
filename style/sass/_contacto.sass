@@ -14,13 +14,14 @@
         padding: 0 6%
 
     &__cuerpo
+        align-self: start
         display: flex
         flex-basis: 45%
         flex-grow: 1
         flex-flow: column nowrap
+        height: 90%
         justify-content: space-between
-        height: 75%
-        padding-top: 4% 
+        padding-top: 8%
 
     &__gMapsBoton
         align-items: center
@@ -81,6 +82,7 @@
         color: #4F4F4F
         font-size: 1.2rem
         line-height: 2rem
+        max-width: 90%
 
     &__inputBoton
         align-items: center
@@ -97,7 +99,7 @@
         max-width: 20rem
         padding: 1.2em 3em
         position: relative
-        right: -21vw
+        right: -55%
         top: 3.7rem
     
     &__inputBotonIcon
@@ -106,7 +108,33 @@
 
 @media (max-width: 768px) 
     .contacto
+        &__cuerpo            
+            height: 5rem
+
         &__gMapsBoton
             display: none
+
         &__inputBotonIcon
             display: inline-block
+
+        &__background
+            flex-flow: row wrap
+            justify-content: flex-start
+
+
+@media ( max-width: 576px)    
+    .contacto
+        &__form
+            flex-grow: 0
+            min-width: 75%
+            padding-right: 10% 
+
+        &__fieldset
+            margin: 3rem 2rem
+
+        &__inputBoton
+            min-width: 50vw
+            right: -20%
+
+        &__titulo
+            font-size: 2rem   

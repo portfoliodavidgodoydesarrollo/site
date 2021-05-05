@@ -3,12 +3,22 @@
     display: grid
     grid-row: 4 / 5
     grid-template-columns: repeat(2, 1fr)
-    grid-template-rows: 8rem 1fr                        
-    height: 90vh
+    grid-template-rows: 8rem 1fr      
     padding-top: 7.5rem
     padding-left: 7.5rem 
     position: relative
     z-index: 2
+
+    &:before
+      content: ""
+      display: inline-block
+      width: 2rem
+      height: 2rem
+      background: $secondary
+      position: absolute
+      left: 0
+      top: 8.5rem
+      border-radius: 50%
 
     &__titulos       
         grid-column: 1/2 
@@ -20,6 +30,7 @@
         line-height: 3rem
         margin: .5rem 0
         letter-spacing: .3rem
+        white-space: nowrap
 
     &__cvSeccion
         align-items: center
@@ -97,10 +108,10 @@
         min-width: 36rem
 
 
-@media (max-width: 768px) 
+@media (max-width: 992px) 
     .sobreMi
         grid-template-columns: 1fr
-        grid-template-rows: 8rem repeat(2, 1fr)       
+        grid-template-rows: 8rem repeat(2, 1fr)   
 
         &__cuerpo
             grid-column: 1/2
@@ -109,3 +120,14 @@
         &__imagen               
             grid-column: 1/2 
             grid-row: 2/3
+    
+        &__parrafo
+            line-height: 2rem
+
+@media ( max-width: 576px)
+    .sobreMi
+        &__titulo
+            font-size: 2rem 
+
+        &__imagen
+            min-width: 28rem

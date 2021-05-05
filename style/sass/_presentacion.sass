@@ -4,11 +4,21 @@
     display: flex
     flex-flow: row nowrap
     grid-row: 2 / 3
-    height: 90vh
     justify-content: space-between
-    padding: 25vh 0
+    max-height: 72rem
     position: relative
     z-index: 2
+
+    &:before
+      content: ""
+      display: inline-block
+      width: 2rem
+      height: 2rem
+      background: $secondary
+      position: absolute
+      left: 0
+      top: 20rem
+      border-radius: 50%
 
 
     &__principal
@@ -16,18 +26,22 @@
         flex-flow: column nowrap
         justify-content: center
         padding-left: 7.5rem
-        padding-top: 7.5rem
 
     &__saludoInicial 
         font-size: 5rem   
         font-weight: 500
-        line-height: 5rem
+        line-height: 6rem
         margin: .5rem 0
         letter-spacing: .3rem
 
         &--hola 
             margin-left: .5rem
 
+    &__letraDInicio
+        max-width: 1.3ch
+
+    &__david
+        white-space: nowrap
 
     &__subSaludoInicial 
         font-size: 2rem
@@ -92,3 +106,9 @@
 
     &__profesionalIconos 
         margin: .5rem
+
+@media (max-width: 576px)
+    .header 
+        &__profesional
+            display: none
+            
