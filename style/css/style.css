@@ -1,5 +1,8 @@
 /** Variables **/
 /** Estilos generales **/
+html {
+  scroll-behavior: smooth; }
+
 body {
   background-color: black;
   font-family: IBM Plex Mono;
@@ -469,7 +472,7 @@ body {
     flex-basis: 45%;
     flex-grow: 1;
     flex-flow: column nowrap;
-    height: 90%;
+    height: 80%;
     justify-content: space-between;
     padding-top: 8%; }
   .contacto__gMapsBoton {
