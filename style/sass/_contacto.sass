@@ -1,0 +1,140 @@
+.contacto 
+    height: 70vh
+    margin-top: 10rem
+    padding: 10vh, 0
+    z-index: 3
+
+    &__background
+        align-items: center
+        background: url("../../assets/backgroundElements/mapa.svg") repeat no-repeat
+        display: flex
+        flex-flow: row wrap-reverse
+        height: 70vh
+        justify-content: space-evenly
+        padding: 0 6%
+
+    &__cuerpo
+        align-self: start
+        display: flex
+        flex-basis: 45%
+        flex-grow: 1
+        flex-flow: column nowrap
+        height: 80%
+        justify-content: space-between
+        padding-top: 8%
+
+    &__gMapsBoton
+        align-items: center
+        background: #989898
+        border-radius: 5px
+        display: flex
+        gap: 1rem
+        flex-flow: row nowrap
+        font-size: 1rem
+        height: 2rem
+        justify-content: center
+        opacity: .8
+        padding: .3em 2em
+        width: 15rem
+
+        &:link  
+            color: white
+            text-decoration: none   
+        &:visited    
+            color: white
+
+    &__gMapsBotonTexto
+        line-height: 2rem
+        margin: 0
+
+    &__gMapsBotonIcon
+
+    &__titulo
+        color: white
+        font-size: 3rem   
+        font-weight: 500
+        line-height: 3rem
+
+    &__form
+        background: #EFEFEF
+        border-radius: 10px
+        flex-basis: 55%
+        flex-grow: 1
+        position: relative
+        top: 3vh
+
+    &__fieldset
+        display: flex
+        border: none
+        flex-flow: column nowrap
+        justify-content: space-evenly
+        height: 60vh
+        margin: 3.5rem
+
+    &__legend
+        color: #848484
+        font-size: .8rem
+
+    &__inputText
+        background: transparent
+        border: none
+        border-bottom: 1px solid #828282
+        color: #4F4F4F
+        font-size: 1.2rem
+        line-height: 2rem
+        max-width: 90%
+
+    &__inputBoton
+        align-items: center
+        background: $secondary
+        border: none
+        border-radius: 30px
+        color: white
+        display: flex
+        flex-flow: row nowrap
+        font-size: 1rem
+        gap: .5rem
+        justify-content: center
+        line-height: 1.6rem
+        max-width: 20rem
+        padding: 1.2em 3em
+        position: relative
+        right: -55%
+        top: 3.7rem
+    
+    &__inputBotonIcon
+        display: none
+        height: 1.5rem
+
+@media (max-width: 768px) 
+    .contacto
+        &__cuerpo            
+            height: 5rem
+
+        &__gMapsBoton
+            display: none
+
+        &__inputBotonIcon
+            display: inline-block
+
+        &__background
+            flex-flow: row wrap
+            justify-content: flex-start
+
+
+@media ( max-width: 576px)    
+    .contacto
+        &__form
+            flex-grow: 0
+            min-width: 75%
+            padding-right: 10% 
+
+        &__fieldset
+            margin: 3rem 2rem
+
+        &__inputBoton
+            min-width: 50vw
+            right: -20%
+
+        &__titulo
+            font-size: 2rem   

@@ -2,6 +2,7 @@
     
 $primary: #1a1a1a
 $secondary: #2BEBC8
+$tertiary: #6846ED
 
 /** Estilos generales **/
 
@@ -14,8 +15,80 @@ body
     
 .app
   background: $primary
+  display: grid
+  grid-template-rows: 5rem 3fr repeat( 3 , 2fr)  
   margin: -1.2rem 3rem 0 3rem
+  overflow: hidden
   padding: 4.2rem 3rem 3rem 3rem
+  
+  &:before
+    background: $secondary
+    content: ""
+    display: inline-block
+    height: 190rem
+    left: 7rem
+    position: absolute
+    top: 30rem
+    width: .1rem
+    
+
+  
+/** app mq **/
+
+@media (max-width: 992px)
+  .app
+    grid-template-rows: 5rem repeat( 4 , 1fr)  
+
+    &:before
+      height: 350rem
+
+@media (max-width: 768px) 
+  .app:before
+    height: 335rem
+
+
+@media (min-width: 422px) and (max-width: 576px)
+  .app:before
+    height: 290rem
+  
+/** root mq **/
+  
+@media (max-width: 576px) 
+  \:root
+    font-size: 8px
+
+
+
+@media (min-width: 576px) and (max-width: 768px) 
+  \:root
+    font-size: 10px
+    
+  
+
+
+@media (min-width: 768px) and (max-width: 992px) 
+  \:root
+    font-size: 10px
+    
+  
+
+
+@media (min-width: 992px) and (max-width: 1200px) 
+  \:root
+    font-size: 12px
+    
+  
+
+
+@media (min-width: 1200px) and (max-width: 1400px) 
+  \:root
+    font-size: 14px
+  
+
+
+@media (min-width: 1400px)
+  \:root
+    font-size: 16px
 
 /** Imports **/
 
@@ -25,6 +98,9 @@ body
 @import "sobreMi"
 @import "misHabilidades"
 @import "contacto"
+@import "footer"
+@import "whatsapp"
 
-@import "mediaQueries"
+@import "background"
+
 @import "keyFrames"

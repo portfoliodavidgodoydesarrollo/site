@@ -1,0 +1,103 @@
+.miPortfolio
+    color: white
+    display: flex
+    flex-flow: column nowrap
+    grid-row: 3 / 4
+    justify-content: start
+    padding-top: 7.5rem
+    padding-left: 7.5rem 
+    position: relative
+    z-index: 2
+
+    &:before
+      content: ""
+      display: inline-block
+      width: 2rem
+      height: 2rem
+      background: $secondary
+      position: absolute
+      left: 0
+      top: 8.5rem
+      border-radius: 50%
+
+
+    &__titulo
+        font-size: 3rem   
+        font-weight: 500
+        line-height: 3rem
+        margin: .5rem 0
+        letter-spacing: .3rem
+        white-space: nowrap
+
+    &__subtitulo        
+        font-size: 1.25rem
+        font-weight: 300
+        line-height: 1.5rem
+        margin: 1rem 0
+        width: 78%
+
+    &__cuerpo
+        display: flex
+        flex-flow: row nowrap
+        gap: 3rem
+        height: 100%
+        justify-content: center
+        margin: 2rem
+
+    &__card
+        background-image: url("../../assets/imagen/imagen_prueba.jpg")
+        height: 80%
+        width: 22%
+
+        &Gradient
+            align-content: center
+            background: rgb(255,255,255)
+            background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%)
+            display: flex
+            flex-flow: column nowrap
+            height: 100%
+            justify-content: flex-end
+            width: 100%
+
+        &Link
+            display: flex
+            flex-flow: row nowrap
+            gap: 1rem
+            justify-content: center
+
+            &:link
+                color: white
+                text-decoration: none
+
+            &:visited
+                color: white
+        
+        &Text
+        
+        &Icon
+
+        &--up
+            align-self: flex-start
+
+        &--down
+            align-self: flex-end
+
+@media (max-width: 992px)
+    .miPortfolio
+        &__cuerpo
+            flex-flow: column nowrap
+            padding: 2rem 20%
+
+        &__card
+            max-width: 18rem
+            width: 70%
+
+@media (min-width: 576px) and (max-width: 768px)
+    .miPortfolio
+        &__cuerpo
+            padding: 2rem 10%
+
+@media (max-width: 576px)
+    .miPortfolio
+        &__cuerpo
+            padding: 0 5%

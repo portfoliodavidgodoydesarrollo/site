@@ -1,49 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
+<html lang="es">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Web site created using create-react-app" />
+<head>
+  <meta charset="utf-8" />
 
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">> 
-    <link rel="stylesheet" href="style/css/style.css" class="css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Web site created using create-react-app" />
 
-    <title>David Godoy Web Developer</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-        <div class="app"> 
-          <h1 class="titulo">David Godoy</h1>  
-          <header class="header">
-            <div class="header__principal">
-                <p class="header__saludoInicial header__saludoInicial--hola">¡Hola!</p>
-                <p class="header__saludoInicial">Me llamo David</p>
-                <p class="header__saludoInicialCopete">Soy desarrollador web, si querés un trabajo creativo
-                                                        y con un código limpio, te invito a contactarme</p>
-                                                    
-                <button class="header__botonContacto">
-                    <a class="header__botonContactoLink" href="#">Contacto</a>
-                </button>
-                <a class="header__scrollDownLink" href="#">
-                    <span class="header__scrollDown">scroll down</span>
-                    <img class="header__flechaIcono" src="assets/icons/arrow_icon.svg" alt="scroll down"></img>
-                </a>
-            </div>
-            <div class="header__profesional">
-                <a href="#">
-                    <img class="header__profesionalIconos" src="assets/icons/github_icon.svg" alt="github"></img>
-                </a>
-                <a href="#">
-                    <img class="header__profesionalIconos" src="assets/icons/linkedin_icon.svg" alt="linkedin"></img>
-                </a>
-                <a href="#">
-                    <img class="header__profesionalIconos" src="assets/backgroundElements/cube1.svg" alt="linkedin"></img>
-                </a>
-            </div>
-        </header>
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap"
+    rel="stylesheet">>
+  <link rel="stylesheet" href="style/css/style.css" class="css">
+
+  <title>David Godoy Web Developer</title>
+</head>
+
+<body>
+  <div class="app">
+    <div class="background">
+      <img src="assets/backgroundElements/blackCircle_1_desktop.svg" alt="black circle" class="background__blackCircle background__blackCircle--1desktop">
+      <img src="assets/backgroundElements/blackCircle_2_desktop.svg" alt="black circle" class="background__blackCircle background__blackCircle--2desktop">
+      <img src="assets/backgroundElements/blackCircle_1_mobile.svg" alt="black circle" class="background__blackCircle background__blackCircle--1mobile">
+      <img src="assets/backgroundElements/blackCircle_2_mobile.svg" alt="black circle" class="background__blackCircle background__blackCircle--2mobile">
+      <img src="assets/backgroundElements/malla_desktop.svg" alt="malla" class="background__malla background__malla--desktop">
+      <img src="assets/backgroundElements/malla_mobile.svg" alt="malla" class="background__malla background__malla--mobile">
+      <img src="assets/backgroundElements/points.svg" alt="puntos" class="background__puntos">
+      <img src="assets/backgroundElements/geometrics_desktop.svg" alt="geometria" class="background__cuerposGeometricos background__cuerposGeometricos--desktop">
+      <img src="assets/backgroundElements/geometrics_mobile.svg" alt="geometria" class="background__cuerposGeometricos background__cuerposGeometricos--mobile">
+    </div>
+    <h1 id="pageTop" class="titulo">David Godoy</h1>
+    <header class="header">
+      <div class="header__principal">
+        <p class="header__saludoInicial header__saludoInicial--hola">¡Hola!</p>
+        <p class="header__saludoInicial">Me llamo <span class="header__david"><img class="header__letraDInicio" src="assets/icons/letraDInicio.svg" alt="D">avid</span></p>
+        <p class="header__subSaludoInicial">Soy desarrollador web, si querés un trabajo creativo
+          y con un código limpio, te invito a contactarme</p>
+
+        <a class="header__botonContacto" href="#">Contacto</a>
+        <a class="header__scrollDownLink" href="#pageBottom">
+          <span class="header__scrollDown">scroll down</span>
+          <img class="header__flechaIcono" src="assets/icons/arrow_icon_v.svg" alt="scroll down">
+        </a>
+      </div>
+      <div class="header__profesional">
+        <a href="#">
+          <img class="header__profesionalIconos" src="assets/icons/github_icon.svg" alt="github">
+        </a>
+        <a href="#">
+          <img class="header__profesionalIconos" src="assets/icons/linkedin_icon.svg" alt="linkedin">
+        </a>
+      </div>
+    </header>
+    <section class="miPortfolio">
+      <h2 class="miPortfolio__titulo">Mi Portafolio</h2>
+      <p class="miPortfolio__subtitulo">Hace poco emprendí este viaje del código. Pude construir y mejorar interfaces de
+        e-commerce y otros proyectos personales.</p>
+      <div class="miPortfolio__cuerpo">
+        <div class="miPortfolio__card miPortfolio__card--down">
+          <div class="miPortfolio__cardGradient">
+            <a class="miPortfolio__cardLink" href="#">
+              <p class="miPortfolio__cardText">CONOCER MAS</p>
+              <img class="miPortfolio__cardIcon" src="./assets/icons/arrow_up_card.svg" alt="conocer mas">
+            </a>
+          </div>
         </div>
-  </body>
+        <div class="miPortfolio__card miPortfolio__card--up">
+          <div class="miPortfolio__cardGradient">
+            <a class="miPortfolio__cardLink" href="#">
+              <p class="miPortfolio__cardText">CONOCER MAS</p>
+              <img class="miPortfolio__cardIcon" src="./assets/icons/arrow_up_card.svg" alt="conocer mas">
+            </a>
+          </div>
+        </div>
+        <div class="miPortfolio__card miPortfolio__card--down">
+          <div class="miPortfolio__cardGradient">
+            <a class="miPortfolio__cardLink" href="#">
+              <p class="miPortfolio__cardText">CONOCER MAS</p>
+              <img class="miPortfolio__cardIcon" src="./assets/icons/arrow_up_card.svg" alt="conocer mas">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sobreMi">
+      <div class="sobreMi__titulos">
+        <h2 class="sobreMi__titulo">Sobre mi</h2>
+        <div class="sobreMi__cvSeccion">
+          <p class="sobreMi__descargaCvTexto">Descarga mi CV</p>
+          <a class="sobreMi__descargaCvBoton" href="#">
+            <p class="sobreMi__descargaCvBotonTexto">Resume</p>
+            <img src="assets/icons/download.svg" alt="descargar cv" class="sobreMi__descargaCvBotonIcon">
+          </a>
+        </div>
+      </div>
+      <div class="sobreMi__cuerpo">
+        <p class="sobreMi__parrafo">
+          Mi visión a futuro es poder establecerme en una empresa, para poder seguir alimentando mis habilidades como
+          desarrollador, enfocado al Front-end y poder compartir una experiencia agradable con todo el equipo
+        </p>
+        <p class="sobreMi__parrafo">
+          Te invito a conocer mi perfil en LinkedIn.
+        </p>
+        <a class="sobreMi__botonLinkedIn" href="#">LinkedIn</a>        
+      </div>
+      <img src="assets/imagen/david.svg" alt="david godoy" class="sobreMi__imagen">
+    </section>
+    <section class="misHabilidades">
+      <h2 class="misHabilidades__titulo">Mis habilidades</h2>      
+      <div class="misHabilidades__cuerpo">
+        <p class="misHabilidades__parrafo">
+          A lo largo del tiempo como desarrollador he adquirido habilidades de gestión de equipos, creatividad y
+          liderazgo. A su vez poseo manejo de Código HTML,CSS,SASS,JS, REACT y VUE.JS.
+        </p>
+        <p class="misHabilidades__parrafo misHabilidades__parrafo--verde">
+          Estoy interesado en seguir desarrollando y mejorando mis habilidades. ¿Tienes en mente algún proyecto?
+        </p>
+        <a class="misHabilidades__botonHablemos" href="#">¡Hablemos!</a>
+      </div>
+      <img src="assets/imagen/habilidades.svg" alt="habilidades" class="misHabilidades__imagen">
+    </section>
+    <section class="contacto">
+      <div class="contacto__background">
+        <div class="contacto__cuerpo">
+          <a href="#" class="contacto__gMapsBoton">
+            <p class="contacto__gMapsBotonTexto">VER EN GOOGLE MAPS</p>
+            <img src="assets/icons/arrow_icon_h.svg" alt="google maps" class="contacto_gMapsBotonIcon">
+          </a>
+          <h2 class="contacto__titulo">¡Hablemos!</h2>
+        </div>
+        <form class="contacto__form">
+          <fieldset class="contacto__fieldset">
+            <legend class="contacto__legend">FORMULARIO DE CONTACTO</legend>
+            <input type="text" class="contacto__inputText" placeholder="Nombre" id="nombre">            
+            <input type="email" class="contacto__inputText" placeholder="Mail" id="mail">
+            <input type="text" class="contacto__inputText" placeholder="Asunto" id="asunto">
+            <input type="text" class="contacto__inputText" placeholder="¿Tienes algún proyecto? Cuéntame" id="proyecto">
+            <button type="submit" class="contacto__inputBoton">ENVIAR MENSAJE<img src="assets/icons/submit.svg" class="contacto__inputBotonIcon" alt="Enviar mensaje"></button>
+          </fieldset>
+        </form>
+      </div>
+    </section> 
+    <footer id="pageBottom" class="footer">
+      <p class="footer__localidad"><img class="footer__localidadIcon" src="assets/icons/ubicacion.svg" alt="ubicacion">Buenos Aires, Lanús</p>
+      <div class="footer__datos">
+        <p class="footer__dato footer__dato--contacto">CONTACTO</p>
+        <p class="footer__dato">davidgodoy89@gmail.com</p>
+        <p class="footer__dato">+54 9 11 4039-8584</p>
+      </div>
+      <p class="footer__copyright"><img class="footer__copyrightIcon" src="assets/icons/copyright.svg" alt="copyright">2021 David Godoy</p>
+      <div class="footer__profesional">
+        <a href="#">
+          <img class="footer__profesionalIconos" src="assets/icons/github_icon.svg" alt="github">
+        </a>
+        <a href="#">
+          <img class="footer__profesionalIconos" src="assets/icons/linkedin_icon.svg" alt="linkedin">
+        </a>
+      </div>
+      <a class="footer__scrollUpLink" href="#">
+        <span class="footer__scrollUp">Arriba</span>
+        <img class="footer__flechaIcono" src="assets/icons/arrow_icon_v.svg" alt="scroll down">
+      </a>
+    </footer>
+    <a class="whatsapp" href="#pageTop"><img class="whatsapp__imagen" src="assets/icons/whtasapp_icon.svg" alt="whtasapp"></a>
+  </div>
+</body>
+
 </html>

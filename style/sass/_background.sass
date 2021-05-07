@@ -1,0 +1,96 @@
+.background
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+    z-index: 1
+
+    &__blackCircle
+        position: absolute
+        width: 30%
+
+        &--1
+            &desktop
+                top: 85% 
+                right: 0
+
+            &mobile
+                display: none
+
+        &--2
+            &desktop
+                right: 20%   
+                top: 0
+
+            &mobile
+                display: none
+
+
+    &__cuerposGeometricos
+        position: absolute
+        right: 18%
+        top: 25%
+        width: 50%
+        &--mobile
+            display: none
+        &--desktop
+            min-width: 50rem
+
+    &__puntos
+        position: absolute
+        right: 18%
+        top: 85%
+        width: 7rem
+
+    &__malla
+        position: absolute
+        right: 13%
+        top: 21rem
+        &--mobile
+            display: none
+        &--desktop
+            width: 75%
+
+
+@media (max-width: 768px)
+    .background 
+        &__cuerposGeometricos
+            &--desktop
+                display: none
+            &--mobile
+                display: inline-block
+                right: 7%
+                top: 10%
+                width: 59%
+                max-height: 67rem
+
+        &__malla
+            &--desktop
+                display: none
+            &--mobile
+                display: inline-block
+                opacity: .1
+                top: 17%
+                right: 3rem
+                width: 80%
+
+        &__blackCircle
+
+            &--1
+                &desktop
+                    display: none
+
+                &mobile
+                    display: inline-block 
+                    top: 80% 
+                    right: 0
+
+            &--2
+                &desktop
+                    display: none 
+
+                &mobile
+                    display: inline-block 
+                    right: 3rem  
+                    top: 0
