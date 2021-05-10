@@ -12,13 +12,14 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap"
     rel="stylesheet">>
   <link rel="stylesheet" href="style/css/style.css" class="css">
+  
 
   <title>David Godoy Web Developer</title>
 </head>
 
 <body>
   <div class="app">
-    <div class="background">
+    <div class="background" id="background">
       <img src="assets/backgroundElements/blackCircle_1_desktop.svg" alt="black circle" class="background__blackCircle background__blackCircle--1desktop">
       <img src="assets/backgroundElements/blackCircle_2_desktop.svg" alt="black circle" class="background__blackCircle background__blackCircle--2desktop">
       <img src="assets/backgroundElements/blackCircle_1_mobile.svg" alt="black circle" class="background__blackCircle background__blackCircle--1mobile">
@@ -37,7 +38,7 @@
         <p class="header__subSaludoInicial">Soy desarrollador web, si querés un trabajo creativo
           y con un código limpio, te invito a contactarme</p>
 
-        <a class="header__botonContacto" href="#">Contacto</a>
+        <a class="header__botonContacto" id="botonContacto" href="#">Contacto</a>
         <a class="header__scrollDownLink" href="#pageBottom">
           <span class="header__scrollDown">scroll down</span>
           <img class="header__flechaIcono" src="assets/icons/arrow_icon_v.svg" alt="scroll down">
@@ -83,27 +84,29 @@
         </div>
       </div>
     </section>
-    <section class="sobreMi">
-      <div class="sobreMi__titulos">
-        <h2 class="sobreMi__titulo">Sobre mi</h2>
-        <div class="sobreMi__cvSeccion">
-          <p class="sobreMi__descargaCvTexto">Descarga mi CV</p>
-          <a class="sobreMi__descargaCvBoton" href="#">
-            <p class="sobreMi__descargaCvBotonTexto">Resume</p>
-            <img src="assets/icons/download.svg" alt="descargar cv" class="sobreMi__descargaCvBotonIcon">
-          </a>
+    <section class="sobreMi" id="sobreMi">
+      <div class="sobreMi__titulosCuerpo" id="sobreMi__titulosCuerpo">
+        <div class="sobreMi__titulos">
+          <h2 class="sobreMi__titulo">Sobre mi</h2>
+          <div class="sobreMi__cvSeccion">
+            <p class="sobreMi__descargaCvTexto">Descarga mi CV</p>
+            <a class="sobreMi__descargaCvBoton" href="#">
+              <p class="sobreMi__descargaCvBotonTexto">Resume</p>
+              <img src="assets/icons/download.svg" alt="descargar cv" class="sobreMi__descargaCvBotonIcon">
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="sobreMi__cuerpo">
-        <p class="sobreMi__parrafo">
-          Mi visión a futuro es poder establecerme en una empresa, para poder seguir alimentando mis habilidades como
-          desarrollador, enfocado al Front-end y poder compartir una experiencia agradable con todo el equipo
-        </p>
-        <p class="sobreMi__parrafo">
-          Te invito a conocer mi perfil en LinkedIn.
-        </p>
-        <a class="sobreMi__botonLinkedIn" href="#">LinkedIn</a>        
-      </div>
+        <div class="sobreMi__cuerpo">
+          <p class="sobreMi__parrafo">
+            Mi visión a futuro es poder establecerme en una empresa, para poder seguir alimentando mis habilidades como
+            desarrollador, enfocado al Front-end y poder compartir una experiencia agradable con todo el equipo
+          </p>
+          <p class="sobreMi__parrafo">
+            Te invito a conocer mi perfil en LinkedIn.
+          </p>
+          <a class="sobreMi__botonLinkedIn" href="#">LinkedIn</a>
+        </div>
+      </div>  
       <img src="assets/imagen/david.svg" alt="david godoy" class="sobreMi__imagen">
     </section>
     <section class="misHabilidades">
@@ -165,5 +168,11 @@
     <a class="whatsapp" href="#pageTop"><img class="whatsapp__imagen" src="assets/icons/whtasapp_icon.svg" alt="whtasapp"></a>
   </div>
 </body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script defer src="main.js"></script>
+
 
 </html>
