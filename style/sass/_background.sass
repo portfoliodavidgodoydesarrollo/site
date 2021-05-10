@@ -12,7 +12,7 @@
 
         &--1
             &desktop
-                top: 85% 
+                top: 80% 
                 right: 0
 
             &mobile
@@ -29,9 +29,10 @@
 
     &__cuerposGeometricos
         position: absolute
-        right: 18%
-        top: 25%
-        width: 50%
+        right: 60%
+        top: 20%
+        width: 50%        
+
         &--mobile
             display: none
         &--desktop
@@ -40,13 +41,13 @@
     &__puntos
         position: absolute
         right: 18%
-        top: 85%
+        top: 80%
         width: 7rem
 
     &__malla
         position: absolute
         right: 13%
-        top: 21rem
+        top: 16rem
         &--mobile
             display: none
         &--desktop
@@ -56,11 +57,12 @@
 @media (max-width: 768px)
     .background 
         &__cuerposGeometricos
+
             &--desktop
                 display: none
             &--mobile
                 display: inline-block
-                right: 7%
+                right: 70%
                 top: 10%
                 width: 59%
                 max-height: 67rem
@@ -94,3 +96,17 @@
                     display: inline-block 
                     right: 3rem  
                     top: 0
+
+
+            
+@keyframes geometrics
+    0%
+        right: 60%
+    100%
+        right: 18%
+
+@keyframes puntos
+    0%
+        top: 100%
+    100%
+        top: 80%
