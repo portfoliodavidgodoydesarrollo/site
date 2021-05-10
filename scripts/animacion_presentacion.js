@@ -36,7 +36,7 @@ function animacionPresentacionFigurasGeometricas(elementos){
 
 function animacionPresentacionPuntos(elemento){
     elemento.style.animation = "puntos .5s linear"
-    elemento.style.top = "85%"
+    elemento.style.top = "80%"
 }
 
 function animacionPresentacionIconosProfesional(elemento){
