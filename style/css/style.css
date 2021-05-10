@@ -248,7 +248,6 @@ body {
     justify-content: center;
     margin: 2rem; }
   .miPortfolio__card {
-    background-image: url("../../assets/imagen/imagen_prueba.jpg");
     height: 80%;
     width: 22%; }
     .miPortfolio__cardGradient {

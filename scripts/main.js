@@ -1,6 +1,12 @@
 import animacionPresentacion from "./animacion_presentacion.js"
+import cargaProyectos from "./carga_proyectos.js"
+
+const PATH = "../assets/proyectos/proyectos.json"
 
 window.addEventListener('load', animacionPresentacion)
+window.addEventListener('load', () => {
+    cargaProyectos(PATH)
+})
 
 
 
