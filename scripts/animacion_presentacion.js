@@ -1,6 +1,4 @@
-window.addEventListener('load', animacionPresentacion)
-
-function animacionPresentacion(){
+export default function animacionPresentacion(){
     const elementos = capturaElementosPresentacion()
     animacionPresentacionFigurasGeometricas(elementos.figuras)
     animacionPresentacionPuntos(elementos.puntos)
@@ -69,11 +67,3 @@ function animacionPresentacionNombre(elemento){
     elemento.style.animation = "nombre .5s ease-in"
     elemento.style.opacity = "1"
 }
-
-/* window.addEventListener('scroll', () => {
-    const positionY = window.scrollY
-    console.log(positionY)
-    if(positionY >= 500){
-        animacionPresentacion()
-    }
-}) */
