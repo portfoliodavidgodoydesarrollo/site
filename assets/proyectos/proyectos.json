@@ -13,5 +13,15 @@
         "titulo":"titulo3",
         "url":"https://github.com#3",
         "imagen":"./assets/proyectos/imagen_prueba.jpg"
+    },
+    {
+        "titulo":"titulo4",
+        "url":"https://github.com#4",
+        "imagen":"./assets/proyectos/imagen_prueba.jpg"
+    },
+    {
+        "titulo":"titulo5",
+        "url":"https://github.com#5",
+        "imagen":"./assets/proyectos/imagen_prueba.jpg"
     }
 ]
