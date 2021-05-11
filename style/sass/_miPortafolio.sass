@@ -27,6 +27,8 @@
         line-height: 3rem
         margin: .5rem 0
         letter-spacing: .3rem
+        opacity: 0
+        transform: translate(-10rem, -2rem) scale(.6)
         white-space: nowrap
 
     &__subtitulo        
@@ -34,6 +36,8 @@
         font-weight: 300
         line-height: 1.5rem
         margin: 1rem 0
+        opacity: 0
+        transform: translate(-10rem, -2rem) scale(.6)
         width: 78%
 
     &__cuerpo
@@ -45,24 +49,36 @@
         margin: 2rem
 
     &__card
-        height: 80%
-        width: 22%
+        height: 22vw
+        width: 15vw
+        position: relative
+        transition: opacity 1s
 
         &Gradient
+            background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(121,121,121,.8) 22%, rgba(255,0,121,.8) 100%)
+            height: 100%
+            width: 100%
+            opacity: 0
+            position: absolute
+            transition: opacity .5s
+
+        &Container
             align-content: center
-            background: rgb(255,255,255)
             background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%)
             display: flex
             flex-flow: column nowrap
             height: 100%
             justify-content: flex-end
             width: 100%
+                         
 
         &Link
             display: flex
             flex-flow: row nowrap
             gap: 1rem
             justify-content: center
+            transition: transform .5s ease
+            z-index: 1
 
             &:link
                 color: white
@@ -88,8 +104,8 @@
             padding: 2rem 20%
 
         &__card
-            max-width: 18rem
-            width: 70%
+            height: 33vw
+            width: 22.5vw
 
 @media (min-width: 576px) and (max-width: 768px)
     .miPortfolio
@@ -100,3 +116,11 @@
     .miPortfolio
         &__cuerpo
             padding: 0 5%
+
+@keyframes textomiportfolio
+    0%
+        opacity: 0
+        transform: translate(-10rem, -2rem) scale(.6)
+    100%
+        opacity: 1
+        transform: translate(0,0) scale(1)

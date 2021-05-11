@@ -20,19 +20,37 @@ async function llamadaDatos(PATH) {
 
 function renderizadoDeProyectos(proyectos) {
     const cuerpoPortfolio = document.querySelector('.miPortfolio__cuerpo')
-
+    
     proyectos.forEach((proyecto, indice) => {
-        crearCardProyecto(proyecto, indice, cuerpoPortfolio)
+        const card = crearCardProyecto(proyecto, indice)        
+        card.style.opacity = "0"
+        cuerpoPortfolio.append(card)     
+        setTimeout(() => {
+            setTimeout(() => {
+            card.style.opacity = "1"
+            }, 100)
+        },400*indice)
     });
 }
 
-function crearCardProyecto(proyecto, indice, cuerpo){
+function crearCardProyecto(proyecto, indice){
     const card = document.createElement('div')
     card.classList.add("miPortfolio__card", indice % 2 == 0 ? "miPortfolio__card--down" : "miPortfolio__card--up")
     card.style.backgroundImage = `url(${proyecto.imagen})`
 
     const cardGradient = document.createElement('div')
     cardGradient.classList.add("miPortfolio__cardGradient")
+    cardGradient.addEventListener('mouseover', () => {
+        cardLink.style.transform = `translateY(${-card.offsetHeight*.8}px)`
+        cardGradient.style.opacity = ".8"
+    })
+    cardGradient.addEventListener('mouseout', () => {
+        cardLink.style.transform = "translateY(0)"
+        cardGradient.style.opacity = "0"
+    })
+
+    const cardContainer = document.createElement('div')
+    cardContainer.classList.add("miPortfolio__cardContainer")
 
     const cardLink = document.createElement('a')
     cardLink.classList.add("miPortfolio__cardLink")        
@@ -48,8 +66,17 @@ function crearCardProyecto(proyecto, indice, cuerpo){
     cardIcon.setAttribute('alt', "conocer mas")
 
     cardLink.append(cardText, cardIcon)
-    cardGradient.append(cardLink)
-    card.append(cardGradient)
+    cardContainer.append(cardLink)
+    card.append(cardGradient)    
+    card.append(cardContainer)
+    cardLink.addEventListener('mouseover', () => {
+        cardLink.style.transform = `translateY(${-card.offsetHeight*.8}px)`
+        cardGradient.style.opacity = ".8"
+    })
+    cardLink.addEventListener('mouseout', () => {
+        cardLink.style.transform = "translateY(0)"
+        cardGradient.style.opacity = "0"
+    })
 
-    cuerpo.append(card)
+    return card
 }
