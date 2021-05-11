@@ -39,15 +39,7 @@ function crearCardProyecto(proyecto, indice){
     card.style.backgroundImage = `url(${proyecto.imagen})`
 
     const cardGradient = document.createElement('div')
-    cardGradient.classList.add("miPortfolio__cardGradient")
-    cardGradient.addEventListener('mouseover', () => {
-        cardLink.style.transform = `translateY(${-card.offsetHeight*.8}px)`
-        cardGradient.style.opacity = ".8"
-    })
-    cardGradient.addEventListener('mouseout', () => {
-        cardLink.style.transform = "translateY(0)"
-        cardGradient.style.opacity = "0"
-    })
+    cardGradient.classList.add("miPortfolio__cardGradient")    
 
     const cardContainer = document.createElement('div')
     cardContainer.classList.add("miPortfolio__cardContainer")
@@ -57,26 +49,37 @@ function crearCardProyecto(proyecto, indice){
     cardLink.setAttribute('href', proyecto.url)
 
     const cardText = document.createElement('p')
-    cardText.classList.add("miPortfolio__cardText")
     cardText.innerText = "CONOCER MÁS"
 
-    const cardIcon = document.createElement('img')
-    cardIcon.classList.add("miPortfolio__cardIcon")     
+    const cardIcon = document.createElement('img') 
     cardIcon.setAttribute('src', "./assets/icons/arrow_up_card.svg")   
     cardIcon.setAttribute('alt', "conocer mas")
 
+    const cardTitle = document.createElement('p')
+    cardTitle.classList.add("miPortfolio__cardTitle")    
+    cardTitle.innerText = proyecto.titulo
+
     cardLink.append(cardText, cardIcon)
-    cardContainer.append(cardLink)
+    cardContainer.append(cardLink, cardTitle)
     card.append(cardGradient)    
     card.append(cardContainer)
-    cardLink.addEventListener('mouseover', () => {
-        cardLink.style.transform = `translateY(${-card.offsetHeight*.8}px)`
-        cardGradient.style.opacity = ".8"
-    })
-    cardLink.addEventListener('mouseout', () => {
-        cardLink.style.transform = "translateY(0)"
-        cardGradient.style.opacity = "0"
-    })
+    
+    hoverCards(card, cardLink, cardGradient, cardTitle, cardLink, cardGradient, cardTitle)
 
     return card
+}
+
+function hoverCards(card, cardLink, cardGradient, cardTitle, ...elementos){
+    elementos.forEach(elemento => {
+        elemento.addEventListener('mouseover', () => {
+            cardLink.style.transform = `translateY(${-card.offsetHeight*.8}px)`
+            cardGradient.style.opacity = ".8"
+            cardTitle.style.opacity = "1"
+        })
+        elemento.addEventListener('mouseout', () => {
+            cardLink.style.transform = "translateY(0)"
+            cardGradient.style.opacity = "0"
+            cardTitle.style.opacity = "0"
+        })
+    })
 }
