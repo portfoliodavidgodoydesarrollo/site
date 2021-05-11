@@ -329,6 +329,11 @@ body {
   padding: 7.5rem 0 7.5rem 7.5rem;
   position: relative;
   z-index: 2; }
+  .sobreMi .sobreMiAnimado {
+    transform: scale(0.5) translate(-150px, -150px);
+    opacity: 0; }
+  .sobreMi .sobreMi__imagen {
+    transform: scale(0.5) translate(150px, 150px); }
   .sobreMi:before {
     content: "";
     display: inline-block;

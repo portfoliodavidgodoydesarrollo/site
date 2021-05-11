@@ -30,7 +30,7 @@ function animacionPresentacionFigurasGeometricas(elementos){
         elemento.style.animation = "geometrics .5s linear"
         elemento.style.right = "18%"
         setTimeout(()=>elemento.style.animation = "", 500)
-        
+
     })
 }
 
