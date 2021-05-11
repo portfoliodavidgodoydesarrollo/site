@@ -1,7 +1,56 @@
+import Carrousel from "./carrousel.js"
+
+const cardWidth = 15
+const gapWidth = 12
+
 export default function cargaProyectos(PATH){
+    let flagBreakpoint = false
+    let mobile = window.innerWidth < 992
+    let timer
+    const flechasHTML = `
+        <img src="./assets/icons/carrousel_arrow-l.svg" alt="izquierda" class="miPortfolio__flecha miPortfolio__flecha--izquierda">
+        <img src="./assets/icons/carrousel_arrow-r.svg" alt="derecha" class="miPortfolio__flecha miPortfolio__flecha--derecha">`
+    
+    const cuerpoHTML = `
+        <div class="miPortfolio__cuerpo">
+        </div>`
+
+    const container = document.querySelector('.miPortfolio__container')
+    container.innerHTML = ""
+    
     llamadaDatos(PATH)
-        .then(json => renderizadoDeProyectos(json))
-        .catch(alert)
+        .then(json => {
+            if(window.innerWidth > 992){
+                container.innerHTML = `
+                    ${flechasHTML} \n
+                    ${cuerpoHTML}`
+                renderizadoDeProyectos(json) 
+                crearCarrousel(json, cardWidth, gapWidth)
+            }
+            else{                
+                container.innerHTML = `
+                    ${cuerpoHTML}`
+                document.querySelector('.miPortfolio__cuerpo').style.height = `${33+45*(json.length-1)}vw`
+                renderizadoDeProyectos(json) 
+            }
+        })
+        .catch(alert)      
+
+    window.addEventListener('resize', ()=>{
+        if(mobile != (window.innerWidth < 992)){
+            flagBreakpoint = true
+            mobile = window.innerWidth < 992
+        }
+        else{
+            flagBreakpoint = false
+        }
+
+        if(flagBreakpoint){
+            cargaProyectos(PATH)
+            flagBreakpoint = false
+            console.log("break")
+        }
+    })
 }
 
 async function llamadaDatos(PATH) {
@@ -82,4 +131,33 @@ function hoverCards(card, cardLink, cardGradient, cardTitle, ...elementos){
             cardTitle.style.opacity = "0"
         })
     })
+}
+
+function crearCarrousel(proyectos, cardWidth, gapWidth){
+    /* Creación objeto Carrousel */
+    const carrousel = new Carrousel(proyectos, cardWidth, gapWidth)
+
+    /* Captura contenedor de cards */
+    const cuerpoCarrousel = document.querySelector('.miPortfolio__cuerpo')
+
+    /* Asignación de ancho según cantidad de proyectos y posicion inicial*/
+    cuerpoCarrousel.style.width = `${carrousel.width}vw`
+    cuerpoCarrousel.style.transform = `translateX(-${carrousel.posicion}vw)`
+
+    /* Captura de flechas y asignación de metodo correspondiente */
+    const flechaIzquierda = document.querySelector('.miPortfolio__flecha--izquierda')
+    flechaIzquierda.style.opacity = '1'
+    flechaIzquierda.addEventListener('click', ()=>{
+        carrousel.atrasarUnCard()
+        cuerpoCarrousel.style.transform = `translateX(-${carrousel.posicion}vw)`
+    })
+    
+    const flechaDerecha = document.querySelector('.miPortfolio__flecha--derecha')
+    flechaDerecha.style.opacity = '1'
+    flechaDerecha.addEventListener('click', ()=>{
+        carrousel.adelantarUnCard()
+        cuerpoCarrousel.style.transform = `translateX(-${carrousel.posicion}vw)`
+    })
+
+    return carrousel
 }
