@@ -51,8 +51,6 @@ body
 
 @media (min-width: 422px) and (max-width: 576px)
   .app:before
-    height: 415rem
-    max-height: 790vw
 
 @media (max-width: 576px)
   .app
@@ -60,9 +58,14 @@ body
     margin: -1.2rem 3rem 0 1rem
     padding: 4.2rem 3rem 3rem 1rem 
     &:before
-      left: 3rem
-    
+      left: 3rem     
 
+@media (max-width: 422px)
+  .app
+    &:before
+      height: 560%
+      max-height: 355rem
+    
   
 /** root mq **/
   

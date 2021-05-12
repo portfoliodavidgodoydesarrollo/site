@@ -37,11 +37,6 @@ body {
   .app:before {
     height: 335rem; } }
 
-@media (min-width: 422px) and (max-width: 576px) {
-  .app:before {
-    height: 415rem;
-    max-height: 790vw; } }
-
 @media (max-width: 576px) {
   .app {
     grid-template-rows: 5rem 3.5fr repeat(3, 4fr);
@@ -49,6 +44,11 @@ body {
     padding: 4.2rem 3rem 3rem 1rem; }
     .app:before {
       left: 3rem; } }
+
+@media (max-width: 422px) {
+  .app:before {
+    height: 560%;
+    max-height: 355rem; } }
 
 /** root mq **/
 @media (max-width: 576px) {
