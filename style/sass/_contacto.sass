@@ -6,7 +6,7 @@
 
     &__background
         align-items: center
-        background: url("../../assets/backgroundElements/mapa2.svg") repeat
+        background: url("../../assets/backgroundElements/mapa.svg") repeat
         display: flex
         flex-flow: row wrap-reverse
         height: 100%
@@ -21,7 +21,7 @@
         flex-flow: column nowrap
         height: 80%
         justify-content: space-between
-        padding-top: 8%
+        padding-top: 5%
 
     &__gMapsBoton
         align-items: center
@@ -54,6 +54,7 @@
         font-size: 3rem   
         font-weight: 500
         line-height: 3rem
+        margin: 0
 
     &__form
         background: #EFEFEF
@@ -106,6 +107,11 @@
         display: none
         height: 1.5rem
 
+
+@media (max-width: 1450px) 
+    .contacto   
+        &__cuerpo          
+            padding-top: 10%
 
 @media (max-width: 768px) 
     .contacto
