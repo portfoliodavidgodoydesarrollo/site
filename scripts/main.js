@@ -1,20 +1,29 @@
 import animacionPresentacion from "./animacion_presentacion.js"
 import animacionMiPortfolio from "./animacion_miPortfolio.js"
+import animarBotones from "./animacion_botones.js"
 
-const PATH = "../assets/proyectos/proyectos.json"
+/* Declaración de variables necesarias */
+
+const proyectosPath = "../assets/proyectos/proyectos.json"
 let flagMiPortfolio = true
+
+/* Animación sección inicial */
 
 animacionPresentacion()
 
+/* Animación sección Mi Portfolio */
+
 window.addEventListener('scroll', () => {
     const rect = document.querySelector('.miPortfolio').getBoundingClientRect()
-    if(rect.top <= 200){
+    if(rect.top <= 500){
         while(flagMiPortfolio){
-            animacionMiPortfolio(PATH)
+            animacionMiPortfolio(proyectosPath)
             flagMiPortfolio = false
         }
     }
 })
+
+/* Animación sección Sobre Mi*/
 
 window.addEventListener('scroll', () => {
     const rect = document.querySelector('.sobreMi').getBoundingClientRect()
@@ -28,3 +37,7 @@ window.addEventListener('scroll', () => {
         
     }
 }) 
+
+/* Agrego animación a los botones */
+
+animarBotones(document.querySelectorAll('.botonAnimado'))

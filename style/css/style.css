@@ -141,7 +141,6 @@ body {
     width: 78%; }
   .header__botonContacto {
     background: transparent;
-    background: transparent;
     border: solid 1.5px #2BEBC8;
     border-radius: 2rem;
     font-size: 1rem;
@@ -149,6 +148,8 @@ body {
     line-height: 3.5rem;
     margin: 2rem 0;
     opacity: 0;
+    overflow: hidden;
+    position: relative;
     text-align: center;
     text-transform: uppercase;
     width: 11rem; }
@@ -157,6 +158,16 @@ body {
       text-decoration: none; }
     .header__botonContacto:visited {
       color: #2BEBC8; }
+    .header__botonContactoFondo {
+      background: #2BEBC8;
+      border-radius: 2rem;
+      width: 100%;
+      left: 0;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      transition: transform 0s;
+      transform: translateX(-100%); }
   .header__scrollDownLink {
     align-items: center;
     display: flex;
@@ -430,6 +441,8 @@ body {
     height: 3.5rem;
     line-height: 3.5rem;
     margin: 2rem 0;
+    overflow: hidden;
+    position: relative;
     text-align: center;
     text-transform: uppercase;
     width: 11rem; }
@@ -515,6 +528,8 @@ body {
     height: 3.5rem;
     line-height: 3.5rem;
     margin: 2rem 0;
+    overflow: hidden;
+    position: relative;
     text-align: center;
     text-transform: uppercase;
     width: 11rem; }

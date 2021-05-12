@@ -48,7 +48,6 @@ export default function cargaProyectos(PATH){
         if(flagBreakpoint){
             cargaProyectos(PATH)
             flagBreakpoint = false
-            console.log("break")
         }
     })
 }
