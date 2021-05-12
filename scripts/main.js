@@ -1,6 +1,8 @@
 import animacionPresentacion from "./animacion_presentacion.js"
 import animacionMiPortfolio from "./animacion_miPortfolio.js"
 import animarBotones from "./animacion_botones.js"
+import animacionSobreMi from "./animacion_sobreMi.js"
+import misHabilidades from "./animacion_misHabilidades.js"
 
 /* Declaración de variables necesarias */
 
@@ -24,19 +26,14 @@ window.addEventListener('scroll', () => {
 })
 
 /* Animación sección Sobre Mi*/
+animacionSobreMi();
 
-window.addEventListener('scroll', () => {
-    const rect = document.querySelector('.sobreMi').getBoundingClientRect()
-    
-    if(rect.top <= 500){
-        $(".sobreMiAnimado" ).css ("transform","scale(1)")
-        $(".sobreMiAnimado" ).css ("opacity","1")
-        $(".sobreMiAnimado" ).css ("transition","1.5s")
-        $(".sobreMi__imagen").css ("transform","scale(1)")
-        $(".sobreMi__imagen").css ("transition","1.5s")
-        
-    }
-}) 
+/* Animacion seccion Mis habilidades */
+
+misHabilidades();
+
+
+
 
 /* Agrego animación a los botones */
 
