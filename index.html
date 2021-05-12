@@ -2,23 +2,24 @@
 <html lang="es">
 
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Web site created using create-react-app" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Soy desarrollador web, si querés un trabajo creativo y con un código limpio, te invito a contactarme">
 
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="icon" href="assets/icons/letraDInicio.svg">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap"
-    rel="stylesheet">>
+    rel="stylesheet">
   <link rel="stylesheet" href="style/css/style.css" class="css">
+  
 
   <title>David Godoy Web Developer</title>
 </head>
 
 <body>
   <div class="app">
-    <div class="background">
+    <div class="background" id="background">
       <img src="assets/backgroundElements/blackCircle_1_desktop.svg" alt="black circle" class="background__blackCircle background__blackCircle--1desktop">
       <img src="assets/backgroundElements/blackCircle_2_desktop.svg" alt="black circle" class="background__blackCircle background__blackCircle--2desktop">
       <img src="assets/backgroundElements/blackCircle_1_mobile.svg" alt="black circle" class="background__blackCircle background__blackCircle--1mobile">
@@ -37,64 +38,46 @@
         <p class="header__subSaludoInicial">Soy desarrollador web, si querés un trabajo creativo
           y con un código limpio, te invito a contactarme</p>
 
-        <a class="header__botonContacto" href="#">Contacto</a>
-        <a class="header__scrollDownLink" href="#pageBottom">
+        <a class="botonAnimado header__botonContacto" id="botonContacto" href="#contacto"><span>Con</span><span>tact</span><span>o</span></a>
+        <a class="header__scrollDownLink" href="#contacto">
           <span class="header__scrollDown">scroll down</span>
           <img class="header__flechaIcono" src="assets/icons/arrow_icon_v.svg" alt="scroll down">
         </a>
       </div>
       <div class="header__profesional">
-        <a href="#">
+        <a href="https://github.com/davidgodoy90/" target="_blank">
           <img class="header__profesionalIconos" src="assets/icons/github_icon.svg" alt="github">
         </a>
-        <a href="#">
+        <a href="https://www.linkedin.com/in/david-fernando-godoy-270a291aa/" target="_blank">
           <img class="header__profesionalIconos" src="assets/icons/linkedin_icon.svg" alt="linkedin">
         </a>
       </div>
     </header>
+
+
+
     <section class="miPortfolio">
       <h2 class="miPortfolio__titulo">Mi Portafolio</h2>
       <p class="miPortfolio__subtitulo">Hace poco emprendí este viaje del código. Pude construir y mejorar interfaces de
         e-commerce y otros proyectos personales.</p>
-      <div class="miPortfolio__cuerpo">
-        <div class="miPortfolio__card miPortfolio__card--down">
-          <div class="miPortfolio__cardGradient">
-            <a class="miPortfolio__cardLink" href="#">
-              <p class="miPortfolio__cardText">CONOCER MAS</p>
-              <img class="miPortfolio__cardIcon" src="./assets/icons/arrow_up_card.svg" alt="conocer mas">
-            </a>
-          </div>
-        </div>
-        <div class="miPortfolio__card miPortfolio__card--up">
-          <div class="miPortfolio__cardGradient">
-            <a class="miPortfolio__cardLink" href="#">
-              <p class="miPortfolio__cardText">CONOCER MAS</p>
-              <img class="miPortfolio__cardIcon" src="./assets/icons/arrow_up_card.svg" alt="conocer mas">
-            </a>
-          </div>
-        </div>
-        <div class="miPortfolio__card miPortfolio__card--down">
-          <div class="miPortfolio__cardGradient">
-            <a class="miPortfolio__cardLink" href="#">
-              <p class="miPortfolio__cardText">CONOCER MAS</p>
-              <img class="miPortfolio__cardIcon" src="./assets/icons/arrow_up_card.svg" alt="conocer mas">
-            </a>
-          </div>
-        </div>
+      <div class="miPortfolio__container">
+        <!-- aca se renderiza el carrousel -->
+
+
       </div>
     </section>
     <section class="sobreMi">
-      <div class="sobreMi__titulos">
+      <div class="sobreMi__titulos sobreMiAnimado">
         <h2 class="sobreMi__titulo">Sobre mi</h2>
         <div class="sobreMi__cvSeccion">
           <p class="sobreMi__descargaCvTexto">Descarga mi CV</p>
-          <a class="sobreMi__descargaCvBoton" href="#">
+          <a class="sobreMi__descargaCvBoton" href="./assets/proyectos/CV.pdf" download="Curriculum Vitae - David Fernando Godoy" target="_blank">
             <p class="sobreMi__descargaCvBotonTexto">Resume</p>
             <img src="assets/icons/download.svg" alt="descargar cv" class="sobreMi__descargaCvBotonIcon">
           </a>
         </div>
       </div>
-      <div class="sobreMi__cuerpo">
+      <div class="sobreMi__cuerpo sobreMiAnimado">
         <p class="sobreMi__parrafo">
           Mi visión a futuro es poder establecerme en una empresa, para poder seguir alimentando mis habilidades como
           desarrollador, enfocado al Front-end y poder compartir una experiencia agradable con todo el equipo
@@ -102,13 +85,13 @@
         <p class="sobreMi__parrafo">
           Te invito a conocer mi perfil en LinkedIn.
         </p>
-        <a class="sobreMi__botonLinkedIn" href="#">LinkedIn</a>        
+        <a class="botonAnimado sobreMi__botonLinkedIn" href="https://www.linkedin.com/in/david-fernando-godoy-270a291aa/" target="_blank"><span>Lin</span><span>kedI</span><span>n</span></a>
       </div>
       <img src="assets/imagen/david.svg" alt="david godoy" class="sobreMi__imagen">
     </section>
     <section class="misHabilidades">
-      <h2 class="misHabilidades__titulo">Mis habilidades</h2>      
-      <div class="misHabilidades__cuerpo">
+      <h2 class="misHabilidades__titulo misHabilidadesAnimacion">Mis habilidades</h2>      
+      <div class="misHabilidades__cuerpo misHabilidadesAnimacion">
         <p class="misHabilidades__parrafo">
           A lo largo del tiempo como desarrollador he adquirido habilidades de gestión de equipos, creatividad y
           liderazgo. A su vez poseo manejo de Código HTML,CSS,SASS,JS, REACT y VUE.JS.
@@ -116,14 +99,14 @@
         <p class="misHabilidades__parrafo misHabilidades__parrafo--verde">
           Estoy interesado en seguir desarrollando y mejorando mis habilidades. ¿Tienes en mente algún proyecto?
         </p>
-        <a class="misHabilidades__botonHablemos" href="#">¡Hablemos!</a>
+        <a class="botonAnimado misHabilidades__botonHablemos" href="#contacto"><span>¡Hab</span><span>lemo</span><span>s!</span></a>
       </div>
-      <img src="assets/imagen/habilidades.svg" alt="habilidades" class="misHabilidades__imagen">
+      <img src="assets/imagen/habilidades.svg" alt="habilidades" class="misHabilidades__imagen" id="misHabilidadesImagen">
     </section>
-    <section class="contacto">
+    <section class="contacto" id="contacto">
       <div class="contacto__background">
         <div class="contacto__cuerpo">
-          <a href="#" class="contacto__gMapsBoton">
+          <a href="https://goo.gl/maps/TMUgx8UcKws1jLTR7" class="contacto__gMapsBoton" target="_blank">
             <p class="contacto__gMapsBotonTexto">VER EN GOOGLE MAPS</p>
             <img src="assets/icons/arrow_icon_h.svg" alt="google maps" class="contacto_gMapsBotonIcon">
           </a>
@@ -150,20 +133,26 @@
       </div>
       <p class="footer__copyright"><img class="footer__copyrightIcon" src="assets/icons/copyright.svg" alt="copyright">2021 David Godoy</p>
       <div class="footer__profesional">
-        <a href="#">
+        <a href="https://github.com/davidgodoy90/" target="_blank">
           <img class="footer__profesionalIconos" src="assets/icons/github_icon.svg" alt="github">
         </a>
-        <a href="#">
+        <a href="https://www.linkedin.com/in/david-fernando-godoy-270a291aa/" target="_blank">
           <img class="footer__profesionalIconos" src="assets/icons/linkedin_icon.svg" alt="linkedin">
         </a>
       </div>
-      <a class="footer__scrollUpLink" href="#">
+      <a class="footer__scrollUpLink" href="#pageTop">
         <span class="footer__scrollUp">Arriba</span>
         <img class="footer__flechaIcono" src="assets/icons/arrow_icon_v.svg" alt="scroll down">
       </a>
     </footer>
-    <a class="whatsapp" href="#pageTop"><img class="whatsapp__imagen" src="assets/icons/whtasapp_icon.svg" alt="whtasapp"></a>
+    <a class="whatsapp" href="https://api.whatsapp.com/send?phone=5491112345678" target="_blank"><img class="whatsapp__imagen" src="assets/icons/whtasapp_icon.svg" alt="whtasapp"></a>
   </div>
 </body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script type="module" defer src="./scripts/main.js"></script>
+
 
 </html>

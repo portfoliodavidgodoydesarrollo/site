@@ -6,8 +6,11 @@ $tertiary: #6846ED
 
 /** Estilos generales **/
 
+html
+  scroll-behavior: smooth
+  
 body 
-  background-color: black
+  background-color: $primary
   font-family: IBM Plex Mono
   font-style: normal
   margin: 0
@@ -16,16 +19,15 @@ body
 .app
   background: $primary
   display: grid
-  grid-template-rows: 5rem 3fr repeat( 3 , 2fr)  
+  grid-template-rows: 5rem 5fr repeat( 3 , 4fr)  
   margin: -1.2rem 3rem 0 3rem
-  overflow: hidden
   padding: 4.2rem 3rem 3rem 3rem
   
   &:before
     background: $secondary
     content: ""
     display: inline-block
-    height: 190rem
+    height: 185rem
     left: 7rem
     position: absolute
     top: 30rem
@@ -49,13 +51,27 @@ body
 
 @media (min-width: 422px) and (max-width: 576px)
   .app:before
-    height: 290rem
+
+@media (max-width: 576px)
+  .app
+    grid-template-rows: 5rem 3.5fr repeat( 3 , 4fr)  
+    margin: -1.2rem 3rem 0 1rem
+    padding: 4.2rem 3rem 3rem 1rem 
+    &:before
+      left: 3rem     
+
+@media (max-width: 422px)
+  .app
+    &:before
+      height: 560%
+      max-height: 320rem
+    
   
 /** root mq **/
   
 @media (max-width: 576px) 
   \:root
-    font-size: 8px
+    font-size: 10px
 
 
 
@@ -102,5 +118,3 @@ body
 @import "whatsapp"
 
 @import "background"
-
-@import "keyFrames"
