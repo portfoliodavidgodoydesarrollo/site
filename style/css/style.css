@@ -759,7 +759,7 @@ body {
 
 @media (max-width: 422px) {
   .footer {
-    grid-template-columns: 33rem 5rem; } }
+    grid-template-columns: 30rem 5rem; } }
 
 .whatsapp {
   bottom: 3rem;
