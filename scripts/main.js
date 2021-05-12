@@ -4,7 +4,7 @@ import animacionMiPortfolio from "./animacion_miPortfolio.js"
 const PATH = "../assets/proyectos/proyectos.json"
 let flagMiPortfolio = true
 
-window.addEventListener('load', animacionPresentacion)
+animacionPresentacion()
 
 window.addEventListener('scroll', () => {
     const rect = document.querySelector('.miPortfolio').getBoundingClientRect()

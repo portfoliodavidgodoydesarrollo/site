@@ -757,6 +757,10 @@ body {
       justify-content: center;
       margin-top: 1rem; } }
 
+@media (max-width: 422px) {
+  .footer {
+    grid-template-columns: 33rem 5rem; } }
+
 .whatsapp {
   bottom: 3rem;
   position: fixed;
@@ -833,7 +837,7 @@ body {
     display: inline-block;
     opacity: .1;
     top: 17%;
-    right: 3rem;
+    right: 0;
     width: 80%; }
   .background__blackCircle--1desktop {
     display: none; }
@@ -845,7 +849,7 @@ body {
     display: none; }
   .background__blackCircle--2mobile {
     display: inline-block;
-    right: 3rem;
+    right: 0;
     top: 0; } }
 
 @keyframes geometrics {
