@@ -5,7 +5,7 @@ const gapWidth = 12
 
 export default function cargaProyectos(PATH){
     let flagBreakpoint = false
-    let mobile = window.innerWidth < 992
+    let mobile = window.innerWidth > 992 ? 1 : window.innerWidth > 576 ? 2 : 3
     const flechasHTML = `
         <img src="./assets/icons/carrousel_arrow-l.svg" alt="izquierda" class="miPortfolio__flecha miPortfolio__flecha--izquierda">
         <img src="./assets/icons/carrousel_arrow-r.svg" alt="derecha" class="miPortfolio__flecha miPortfolio__flecha--derecha">`
@@ -29,7 +29,7 @@ export default function cargaProyectos(PATH){
             else if(window.innerWidth > 576){                
                 container.innerHTML = `
                     ${cuerpoHTML}`
-                document.querySelector('.miPortfolio__cuerpo').style.height = `${33+45*(json.length-1)}vw`
+                document.querySelector('.miPortfolio__cuerpo').style.height = `${33+36*(json.length)/2}vw`
                 renderizadoDeProyectos(json) 
             }
             else{        
@@ -42,9 +42,9 @@ export default function cargaProyectos(PATH){
         .catch(alert)      
 
     window.addEventListener('resize', ()=>{
-        if(mobile != (window.innerWidth < 992)){
+        if(mobile != (window.innerWidth > 992 ? 1 : window.innerWidth > 576 ? 2 : 3)){
             flagBreakpoint = true
-            mobile = window.innerWidth < 992
+            mobile = window.innerWidth > 992 ? 1 : window.innerWidth > 576 ? 2 : 3
         }
         else{
             flagBreakpoint = false

@@ -48,7 +48,7 @@ body {
 @media (max-width: 422px) {
   .app:before {
     height: 560%;
-    max-height: 355rem; } }
+    max-height: 320rem; } }
 
 /** root mq **/
 @media (max-width: 576px) {
@@ -345,9 +345,17 @@ body {
     height: 33vw;
     width: 22.5vw; } }
 
-@media (min-width: 576px) and (max-width: 768px) {
+@media (min-width: 576px) and (max-width: 992px) {
   .miPortfolio__cuerpo {
-    padding: 2rem 10%; } }
+    column-count: 2;
+    column-gap: 5rem;
+    display: inline-block;
+    height: 100%;
+    padding: 2rem 10%;
+    transition: transform .5s; }
+  .miPortfolio__card {
+    margin: 3rem 0;
+    break-inside: avoid; } }
 
 @media (max-width: 576px) {
   .miPortfolio__container {

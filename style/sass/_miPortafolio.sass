@@ -137,10 +137,18 @@
             height: 33vw
             width: 22.5vw
 
-@media (min-width: 576px) and (max-width: 768px)
+@media (min-width: 576px) and (max-width: 992px)
     .miPortfolio
         &__cuerpo
+            column-count: 2
+            column-gap: 5rem
+            display: inline-block
+            height: 100%
             padding: 2rem 10%
+            transition: transform .5s
+        &__card
+            margin: 3rem 0
+            break-inside: avoid
 
 @media (max-width: 576px)
     .miPortfolio
