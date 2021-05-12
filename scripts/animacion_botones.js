@@ -72,4 +72,4 @@ function reiniciarBoton(boton,interiorBoton, timeLapse){
         /* Reemplazar innerHTML por el capturado al principio, reinicio de botón, depués de 200ms */
         boton.innerHTML = interiorBoton
     }, timeLapse)
-}
+}   

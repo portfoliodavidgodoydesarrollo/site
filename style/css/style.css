@@ -43,6 +43,7 @@ body {
 
 @media (max-width: 576px) {
   .app {
+    grid-template-rows: 5rem 3.5fr repeat(3, 4fr);
     margin: -1.2rem 3rem 0 1rem;
     padding: 4.2rem 3rem 3rem 1rem; }
     .app:before {
@@ -51,7 +52,7 @@ body {
 /** root mq **/
 @media (max-width: 576px) {
   :root {
-    font-size: 8px; } }
+    font-size: 10px; } }
 
 @media (min-width: 576px) and (max-width: 768px) {
   :root {
@@ -231,7 +232,7 @@ body {
   grid-row: 3 / 4;
   justify-content: start;
   padding-top: 7.5rem;
-  padding-left: 7.5rem;
+  padding-left: 5rem;
   position: relative;
   z-index: 2; }
   .miPortfolio:before {
@@ -263,7 +264,7 @@ body {
     width: 78%; }
   .miPortfolio__container {
     height: 100%;
-    margin: 2rem;
+    margin: 2rem auto;
     overflow: hidden;
     position: relative;
     width: 70vw; }
@@ -348,8 +349,15 @@ body {
     padding: 2rem 10%; } }
 
 @media (max-width: 576px) {
+  .miPortfolio__container {
+    max-height: 60rem; }
+  .miPortfolio__titulo {
+    font-size: 2rem; }
   .miPortfolio__cuerpo {
-    padding: 0 5%; } }
+    padding: 0 5%; }
+  .miPortfolio__card {
+    height: 40.33vw;
+    width: 27.5vw; } }
 
 @keyframes textomiportfolio {
   0% {
@@ -365,7 +373,7 @@ body {
   grid-row: 4 / 5;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 8rem 1fr;
-  padding: 7.5rem 0 7.5rem 7.5rem;
+  padding: 7.5rem 0 7.5rem 5rem;
   position: relative;
   z-index: 2; }
   .sobreMiAnimado {
@@ -457,12 +465,13 @@ body {
     margin: 1rem auto 0;
     max-width: 50%;
     min-width: 36rem;
+    opacity: 0;
     transform: scale(0.5) translate(150px, 150px); }
 
 @media (max-width: 992px) {
   .sobreMi {
     grid-template-columns: 1fr;
-    grid-template-rows: 8rem 4fr 3fr; }
+    grid-template-rows: 8rem 3fr 3fr; }
     .sobreMi__cuerpo {
       grid-column: 1/2;
       grid-row: 3/4; }
@@ -476,8 +485,9 @@ body {
   .sobreMi__titulo {
     font-size: 2rem; }
   .sobreMi__imagen {
-    min-width: 28rem;
-    margin: 3rem 3rem 0 3rem; } }
+    min-width: 23rem;
+    margin: 1rem;
+    max-width: 70vw; } }
 
 .misHabilidades {
   color: white;
@@ -485,9 +495,12 @@ body {
   grid-row: 5 / 6;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 4rem 1fr;
-  padding: 7.5rem 0 7.5rem 7.5rem;
+  padding: 7.5rem 0 7.5rem 5rem;
   position: relative;
   z-index: 2; }
+  .misHabilidadesAnimacion {
+    transform: scale(0.5) translate(-150px, -150px);
+    opacity: 0; }
   .misHabilidades:before {
     content: "";
     display: inline-block;
@@ -544,13 +557,13 @@ body {
     margin: 1rem auto 0;
     max-width: 50%;
     min-width: 36rem;
-    position: absolute;
+    position: fixed;
     transform: translate(500px); }
 
 @media (max-width: 992px) {
   .misHabilidades {
     grid-template-columns: 1fr;
-    grid-template-rows: 8rem 4fr 3fr; }
+    grid-template-rows: 8rem 3fr 3fr; }
     .misHabilidades__cuerpo {
       grid-column: 1/2;
       grid-row: 3/4; }
@@ -565,12 +578,9 @@ body {
   .misHabilidades__titulo {
     font-size: 2rem; }
   .misHabilidades__imagen {
-    min-width: 28rem;
-    margin: 3rem 3rem 0 3rem; } }
-
-.misHabilidadesAnimacion {
-  transform: scale(0.5) translate(-150px, -150px);
-  opacity: 0; }
+    min-width: 23rem;
+    margin: 1rem;
+    max-width: 70vw; } }
 
 .contacto {
   height: 70vh;

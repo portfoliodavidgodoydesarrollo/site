@@ -8,7 +8,8 @@ window.addEventListener('scroll', () => {
         $(".sobreMiAnimado" ).css ("opacity","1")
         $(".sobreMiAnimado" ).css ("transition","1.5s")
         $(".sobreMi__imagen").css ("transform","scale(1)")
-        $(".sobreMi__imagen").css ("transition","1.5s")
+        $(".sobreMi__imagen").css ("transition","1.5s")        
+        $(".sobreMi__imagen" ).css ("opacity","1")
         
     }
 }) 

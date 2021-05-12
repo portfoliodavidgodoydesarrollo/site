@@ -5,7 +5,7 @@
     grid-row: 3 / 4
     justify-content: start
     padding-top: 7.5rem
-    padding-left: 7.5rem 
+    padding-left: 5rem 
     position: relative
     z-index: 2
 
@@ -42,7 +42,7 @@
 
     &__container
         height: 100%
-        margin: 2rem
+        margin: 2rem auto
         overflow: hidden
         position: relative
         width: 70vw
@@ -144,8 +144,16 @@
 
 @media (max-width: 576px)
     .miPortfolio
+        &__container      
+            max-height: 60rem   
+        &__titulo
+            font-size: 2rem 
         &__cuerpo
             padding: 0 5%
+
+        &__card
+            height: 40.33vw
+            width: 27.5vw
 
 @keyframes textomiportfolio
     0%
