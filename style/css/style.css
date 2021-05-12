@@ -39,7 +39,8 @@ body {
 
 @media (min-width: 422px) and (max-width: 576px) {
   .app:before {
-    height: 290rem; } }
+    height: 415rem;
+    max-height: 790vw; } }
 
 @media (max-width: 576px) {
   .app {
@@ -482,12 +483,14 @@ body {
       line-height: 2rem; } }
 
 @media (max-width: 576px) {
-  .sobreMi__titulo {
-    font-size: 2rem; }
-  .sobreMi__imagen {
-    min-width: 23rem;
-    margin: 1rem;
-    max-width: 70vw; } }
+  .sobreMi {
+    grid-template-rows: 8rem 2fr 3fr; }
+    .sobreMi__titulo {
+      font-size: 2rem; }
+    .sobreMi__imagen {
+      min-width: 23rem;
+      margin: 1rem;
+      max-width: 70vw; } }
 
 .misHabilidades {
   color: white;
@@ -575,12 +578,14 @@ body {
       line-height: 2rem; } }
 
 @media (max-width: 576px) {
-  .misHabilidades__titulo {
-    font-size: 2rem; }
-  .misHabilidades__imagen {
-    min-width: 23rem;
-    margin: 1rem;
-    max-width: 70vw; } }
+  .misHabilidades {
+    grid-template-rows: 8rem 2fr 3fr; }
+    .misHabilidades__titulo {
+      font-size: 2rem; }
+    .misHabilidades__imagen {
+      min-width: 23rem;
+      margin: 1rem;
+      max-width: 70vw; } }
 
 .contacto {
   height: 70vh;
@@ -589,10 +594,10 @@ body {
   z-index: 3; }
   .contacto__background {
     align-items: center;
-    background: url("../../assets/backgroundElements/mapa.svg") repeat no-repeat;
+    background: url("../../assets/backgroundElements/mapa2.svg") repeat;
     display: flex;
     flex-flow: row wrap-reverse;
-    height: 70vh;
+    height: 100%;
     justify-content: space-evenly;
     padding: 0 6%; }
   .contacto__cuerpo {

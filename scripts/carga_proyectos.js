@@ -26,10 +26,16 @@ export default function cargaProyectos(PATH){
                 renderizadoDeProyectos(json) 
                 crearCarrousel(json, cardWidth, gapWidth)
             }
-            else{                
+            else if(window.innerWidth > 576){                
                 container.innerHTML = `
                     ${cuerpoHTML}`
                 document.querySelector('.miPortfolio__cuerpo').style.height = `${33+45*(json.length-1)}vw`
+                renderizadoDeProyectos(json) 
+            }
+            else{        
+                container.innerHTML = `
+                    ${cuerpoHTML}`
+                document.querySelector('.miPortfolio__cuerpo').style.height = `${40.33+52.33*(json.length-1)}vw`
                 renderizadoDeProyectos(json) 
             }
         })
