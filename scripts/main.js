@@ -3,7 +3,6 @@ import animacionMiPortfolio from "./animacion_miPortfolio.js"
 import animacion_sobreMi from "./animacion_sobreMi.js"
 import animacion_misHabilidades from "./animacion_misHabilidades.js"
 import animarBotones from "./animacion_botones.js"
-import animacionSobreMi from "./animacion_sobreMi.js"
 
 /* Declaración de variables necesarias */
 
@@ -17,6 +16,7 @@ animacionPresentacion()
 
 window.addEventListener('scroll', () => {
     const rect = document.querySelector('.miPortfolio').getBoundingClientRect()
+
     if(rect.top <= 500){
         animacionMiPortfolio(proyectosPath)
     }
@@ -26,10 +26,9 @@ window.addEventListener('scroll', () => {
 
 window.addEventListener('scroll', () => {
     const rect = document.querySelector('.sobreMi').getBoundingClientRect()
-    
+
     if(rect.top <= 500){
-        animacionSobreMi()
-        
+        animacion_sobreMi()
     }
 })
 
