@@ -8,7 +8,7 @@ export default function misHabilidades(){
             $(".misHabilidadesAnimacion" ).css ("opacity","1")
             $(".misHabilidadesAnimacion" ).css ("transition","1.5s")
             $("#misHabilidadesImagen" ).css ("transform","scale(1)")
-            $("#misHabilidadesImagen" ).css ("position","relative")
+            $("#misHabilidadesImagen" ).css ("position","absolute")
             $("#misHabilidadesImagen" ).css ("transition","1.5s")
     
         }

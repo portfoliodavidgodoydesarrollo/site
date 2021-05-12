@@ -29,10 +29,7 @@ window.addEventListener('scroll', () => {
 animacionSobreMi();
 
 /* Animacion seccion Mis habilidades */
-
 misHabilidades();
-
-
 
 
 /* Agrego animación a los botones */
