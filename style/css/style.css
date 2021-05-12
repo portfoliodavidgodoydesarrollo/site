@@ -41,6 +41,13 @@ body {
   .app:before {
     height: 290rem; } }
 
+@media (max-width: 576px) {
+  .app {
+    margin: -1.2rem 3rem 0 1rem;
+    padding: 4.2rem 3rem 3rem 1rem; }
+    .app:before {
+      left: 3rem; } }
+
 /** root mq **/
 @media (max-width: 576px) {
   :root {
@@ -757,9 +764,9 @@ body {
       justify-content: center;
       margin-top: 1rem; } }
 
-@media (max-width: 422px) {
+@media (max-width: 576px) {
   .footer {
-    grid-template-columns: 30rem 5rem; } }
+    grid-template-columns: 72vw 7vw; } }
 
 .whatsapp {
   bottom: 3rem;
@@ -838,7 +845,7 @@ body {
     opacity: .1;
     top: 17%;
     right: 0;
-    width: 80%; }
+    width: 84%; }
   .background__blackCircle--1desktop {
     display: none; }
   .background__blackCircle--1mobile {
