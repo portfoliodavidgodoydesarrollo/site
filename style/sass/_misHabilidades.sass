@@ -53,6 +53,8 @@
         height: 3.5rem   
         line-height: 3.5rem
         margin: 2rem 0 
+        overflow: hidden
+        position: relative
         text-align: center
         text-transform: uppercase
         width: 11rem
@@ -73,7 +75,7 @@
 @media (max-width: 992px)   
     .misHabilidades
         grid-template-columns: 1fr
-        grid-template-rows: 8rem repeat(2, 1fr)       
+        grid-template-rows: 8rem 4fr 3fr      
 
         &__cuerpo
             grid-column: 1/2
@@ -94,3 +96,4 @@
 
         &__imagen
             min-width: 28rem
+            margin: 3rem 3rem 0 3rem
