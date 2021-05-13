@@ -8,8 +8,8 @@ export default function envioFormulario(){
         fetch('../enviar.php', {
             method: 'POST',
             body: formData
-        }
-        .then(alert("Envío exitoso")))
+        })
+        .then(alert("Envío exitoso"))
         .catch(alert("No se pudo realizar el envío"))
     })
 }
