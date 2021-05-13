@@ -4,16 +4,10 @@ export default function envioFormulario(){
         evento.preventDefault()
 
         const formData = new FormData(formulario)
-        const datos = {
-            nombre: formData.get('nombre'),
-            mail: formData.get('mail'),
-            asunto: formData.get('asunto'),
-            cuentame: formData.get('cuentame')
-        }
 
         fetch('../enviar.php', {
             method: 'POST',
-            body: datos
+            body: formData
         }
         .then(alert("Envío exitoso")))
         .catch(alert("No se pudo realizar el envío"))

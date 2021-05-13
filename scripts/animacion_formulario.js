@@ -4,7 +4,6 @@ export default function animacionFormulario(){
         const rect = document.querySelector('.contacto__gMapsBotonTexto').getBoundingClientRect()
         
         if(rect.top <= 300){
-            console.log("holi")
             $("#contacto__form" ).css ("transform","scale(1)")
             $("#contacto__form" ).css ("transition","1.5s")
 
