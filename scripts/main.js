@@ -3,6 +3,7 @@ import animacionMiPortfolio from "./animacion_miPortfolio.js"
 import animacion_sobreMi from "./animacion_sobreMi.js"
 import animacion_misHabilidades from "./animacion_misHabilidades.js"
 import animarBotones from "./animacion_botones.js"
+import animacionFormulario from "./animacion_formulario.js"
 
 /* Declaración de variables necesarias */
 
@@ -42,6 +43,11 @@ window.addEventListener('scroll', () => {
         
     }
 }) 
+
+
+/* animacion seccion formulario de contacto */
+
+animacionFormulario()
 
 /* Agrego animación a los botones */
 

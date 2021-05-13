@@ -112,13 +112,13 @@
           </a>
           <h2 class="contacto__titulo">¡Hablemos!</h2>
         </div>
-        <form class="contacto__form">
+        <form action="enviar.php" method="post" class="contacto__form" id="contacto__form">
           <fieldset class="contacto__fieldset">
             <legend class="contacto__legend">FORMULARIO DE CONTACTO</legend>
-            <input type="text" class="contacto__inputText" placeholder="Nombre" id="nombre">            
-            <input type="email" class="contacto__inputText" placeholder="Mail" id="mail">
-            <input type="text" class="contacto__inputText" placeholder="Asunto" id="asunto">
-            <input type="text" class="contacto__inputText" placeholder="¿Tienes algún proyecto? Cuéntame" id="proyecto">
+            <input type="text" name="nombre" class="contacto__inputText" placeholder="Nombre" id="nombre">            
+            <input type="email" name="mail" class="contacto__inputText" placeholder="Mail" id="mail">
+            <input type="text" name="asunto" class="contacto__inputText" placeholder="Asunto" id="asunto">
+            <input type="text" name="cuentame" class="contacto__inputText" placeholder="¿Tienes algún proyecto? Cuéntame" id="proyecto">
             <button type="submit" class="contacto__inputBoton">ENVIAR MENSAJE<img src="assets/icons/submit.svg" class="contacto__inputBotonIcon" alt="Enviar mensaje"></button>
           </fieldset>
         </form>
