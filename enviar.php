@@ -1,5 +1,3 @@
-<!--En un archivo separado que guardarás con extensión .php y el cual se debe llamar enviar.php, pega el siguiente código:
-      
 <?php
 $name = $_POST['nombre'];
 $mail = $_POST['mail'];
@@ -24,4 +22,3 @@ mail($para, $asunto, utf8_decode($message), $header);
 
 header("Location:index.html");
 ?>
--->
