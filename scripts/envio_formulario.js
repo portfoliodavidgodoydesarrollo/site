@@ -9,8 +9,9 @@ export default function envioFormulario(){
             method: 'POST',
             body: formData
         })
-        .then(alert("Envío exitoso"))
-        .catch(alert("No se pudo realizar el envío"))
+        .then(res => res.json())
+        .then(json => console.log(json))
+        .catch(error => alert(error))
     })
 }
 

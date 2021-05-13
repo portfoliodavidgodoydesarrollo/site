@@ -6,6 +6,8 @@ $mail = $_POST['mail'];
 $phone = $_POST['asunto'];
 $message = $_POST['cuentame'];
 
+echo json_encode($mail)
+
 $header = 'From: ' . $mail . " \r\n";
 $header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
 $header .= "Mime-Version: 1.0 \r\n";
