@@ -3,8 +3,8 @@
 <?php
 $name = $_POST['nombre'];
 $mail = $_POST['mail'];
-$phone = $_POST['asunto'];
-$message = $_POST['cuentame'];
+$asunto = $_POST['asunto'];
+$cuentame = $_POST['cuentame'];
 
 echo json_encode($mail)
 
@@ -16,7 +16,7 @@ $header .= "Content-Type: text/plain";
 $message = "Este mensaje fue enviado por: " . $name . " \r\n";
 $message .= "Su e-mail es: " . $mail . " \r\n";
 $message .= "El asunto es: " . $phone . " \r\n";
-$message .= "Mensaje: " . $_POST['message'] . " \r\n";
+$message .= "Mensaje: " . $_POST['cuentame'] . " \r\n";
 $message .= "Enviado el: " . date('d/m/Y', time());
 
 $para = 'amandreacchi@gmail.com';

@@ -5,7 +5,7 @@ export default function envioFormulario(){
 
         const formData = new FormData(formulario)
 
-        fetch('../enviar.php', {
+        fetch('enviar.php', {
             method: 'POST',
             body: formData
         })
