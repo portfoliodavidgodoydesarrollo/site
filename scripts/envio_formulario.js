@@ -11,10 +11,12 @@ export default function envioFormulario(){
             cuentame: formData.get('cuentame')
         }
 
-        fetch('../index.php', {
+        fetch('../enviar.php', {
             method: 'POST',
             body: datos
-        })
+        }
+        .then(alert("Envío exitoso")))
+        .catch(alert("No se pudo realizar el envío"))
     })
 }
 
