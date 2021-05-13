@@ -6,7 +6,6 @@ const gapWidth = 12
 export default function cargaProyectos(PATH){
     let flagBreakpoint = false
     let mobile = window.innerWidth > 992 ? 1 : window.innerWidth > 576 ? 2 : 3
-    console.log(mobile)
     const flechasHTML = `
         <img src="./assets/icons/carrousel_arrow-l.svg" alt="izquierda" class="miPortfolio__flecha miPortfolio__flecha--izquierda">
         <img src="./assets/icons/carrousel_arrow-r.svg" alt="derecha" class="miPortfolio__flecha miPortfolio__flecha--derecha">`

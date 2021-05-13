@@ -710,10 +710,12 @@ body {
 @media (max-width: 576px) {
   .contacto__form {
     flex-grow: 0;
-    min-width: 75%;
-    padding-right: 10%; }
+    min-width: 90%;
+    padding-right: 0; }
   .contacto__fieldset {
-    margin: 3rem 2rem; }
+    margin: 2rem 1rem; }
+  .contacto__inputText {
+    max-width: 100%; }
   .contacto__inputBoton {
     min-width: 50vw;
     right: -20%; }
@@ -818,6 +820,10 @@ body {
 @media (max-width: 576px) {
   .footer {
     grid-template-columns: 72vw 7vw; } }
+
+@media (max-width: 330px) {
+  .footer {
+    padding-left: 1rem; } }
 
 .whatsapp {
   bottom: 3rem;
