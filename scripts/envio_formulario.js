@@ -1,5 +1,17 @@
 export default function envioFormulario(){
     const formulario = capturaNodosForm()
+    escuchaEventoForm(formulario)
+
+}
+
+function capturaNodosForm(){
+
+    const formNode = document.querySelector('.contacto__form')
+
+    return formNode
+}
+
+function escuchaEventoForm(formulario){
     formulario.addEventListener('submit',function(evento){
         evento.preventDefault()
 
@@ -9,14 +21,7 @@ export default function envioFormulario(){
             method: 'POST',
             body: formData
         })
-        .then(respuesta => console.log(respuesta))
-        .catch(error => alert(error))
+            .then(() => alert(`Gracias ${formData.get('nombre')}. El correo se ha enviado con éxito.`))
+            .catch(error => alert(error))
     })
-}
-
-function capturaNodosForm(){
-
-    const formNode = document.querySelector('.contacto__form')
-
-    return formNode
 }
