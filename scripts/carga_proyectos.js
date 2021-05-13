@@ -76,12 +76,12 @@ function renderizadoDeProyectos(proyectos) {
     const cuerpoPortfolio = document.querySelector('.miPortfolio__cuerpo')
     
     proyectos.forEach((proyecto, indice) => {
+        setTimeout(() => {
         const card = crearCardProyecto(proyecto, indice)        
         card.style.opacity = "0"
         cuerpoPortfolio.append(card)     
-        setTimeout(() => {
             setTimeout(() => {
-            card.style.opacity = "1"
+                card.style.opacity = "1"
             }, 100)
         },400*indice)
     });

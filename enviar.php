@@ -17,8 +17,8 @@ $message .= "El asunto es: " . $phone . " \r\n";
 $message .= "Mensaje: " . $_POST['message'] . " \r\n";
 $message .= "Enviado el: " . date('d/m/Y', time());
 
-$para = 'muotrimarcelo@gmail.com';
-$asunto = 'Mensaje de PRECOMPC';
+$para = 'portfoliodavidgodoydesarrollo@gmail.com';
+$asunto = 'Consulta desde portfolio';
 
 mail($para, $asunto, utf8_decode($message), $header);
 
