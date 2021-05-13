@@ -710,7 +710,7 @@ body {
 @media (max-width: 576px) {
   .contacto {
     margin-left: -3rem;
-    width: 100vw; }
+    width: 106%; }
     .contacto__background {
       width: 100%; }
     .contacto__form {
