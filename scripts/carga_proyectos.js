@@ -69,7 +69,7 @@ async function llamadaDatos(PATH) {
         return json
     }
 
-    throw new Error(repsuesta.status)
+    throw new Error(respuesta.status)
 }
 
 function renderizadoDeProyectos(proyectos) {
