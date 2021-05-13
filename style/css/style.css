@@ -598,7 +598,7 @@ body {
 .contacto {
   height: 70vh;
   margin-top: 10rem;
-  padding: 10vh, 0;
+  padding: 10vh 0;
   z-index: 3; }
   .contacto__background {
     align-items: center;
@@ -676,6 +676,7 @@ body {
     border: none;
     border-radius: 30px;
     color: white;
+    cursor: pointer;
     display: flex;
     flex-flow: row nowrap;
     font-size: 1rem;
@@ -691,7 +692,7 @@ body {
     display: none;
     height: 1.5rem; }
 
-@media (max-width: 1450px) {
+@media (max-width: 2000px) {
   .contacto__cuerpo {
     padding-top: 10%; } }
 
@@ -707,17 +708,26 @@ body {
     justify-content: flex-start; } }
 
 @media (max-width: 576px) {
-  .contacto__form {
-    flex-grow: 0;
-    min-width: 75%;
-    padding-right: 10%; }
-  .contacto__fieldset {
-    margin: 3rem 2rem; }
-  .contacto__inputBoton {
-    min-width: 50vw;
-    right: -20%; }
-  .contacto__titulo {
-    font-size: 2rem; } }
+  .contacto {
+    margin-left: -3rem;
+    width: 100vw; }
+    .contacto__background {
+      width: 100%; }
+    .contacto__form {
+      flex-grow: 0;
+      margin-left: 20%;
+      min-width: 80%;
+      padding-right: 0; }
+    .contacto__fieldset {
+      margin: 2rem 1rem; }
+    .contacto__inputText {
+      max-width: 100%; }
+    .contacto__inputBoton {
+      min-width: 50vw;
+      right: -20%; }
+    .contacto__titulo {
+      font-size: 2rem;
+      margin-left: 2rem; } }
 
 .footer {
   color: white;
@@ -817,6 +827,10 @@ body {
 @media (max-width: 576px) {
   .footer {
     grid-template-columns: 72vw 7vw; } }
+
+@media (max-width: 330px) {
+  .footer {
+    padding-left: 2rem; } }
 
 .whatsapp {
   bottom: 3rem;

@@ -4,6 +4,7 @@ import animacion_sobreMi from "./animacion_sobreMi.js"
 import animacion_misHabilidades from "./animacion_misHabilidades.js"
 import animarBotones from "./animacion_botones.js"
 import animacionFormulario from "./animacion_formulario.js"
+import envioFormulario from "./envio_formulario.js"
 
 /* Declaración de variables necesarias */
 
@@ -52,3 +53,5 @@ animacionFormulario()
 /* Agrego animación a los botones */
 
 animarBotones(document.querySelectorAll('.botonAnimado'))
+
+envioFormulario()

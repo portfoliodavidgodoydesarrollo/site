@@ -1,7 +1,7 @@
 .contacto 
     height: 70vh
     margin-top: 10rem
-    padding: 10vh, 0
+    padding: 10vh 0
     z-index: 3
 
     &__background
@@ -92,6 +92,7 @@
         border: none
         border-radius: 30px
         color: white
+        cursor: pointer
         display: flex
         flex-flow: row nowrap
         font-size: 1rem
@@ -109,7 +110,7 @@
         height: 1.5rem
 
 
-@media (max-width: 1450px) 
+@media (max-width: 2000px) 
     .contacto   
         &__cuerpo          
             padding-top: 10%
@@ -132,13 +133,21 @@
 
 @media ( max-width: 576px)    
     .contacto
+        margin-left: -3rem
+        width: 100vw
+        &__background
+            width: 100%
         &__form
             flex-grow: 0
-            min-width: 75%
-            padding-right: 10% 
+            margin-left: 20%
+            min-width: 80%
+            padding-right: 0
 
         &__fieldset
-            margin: 3rem 2rem
+            margin: 2rem 1rem
+
+        &__inputText
+            max-width: 100%
 
         &__inputBoton
             min-width: 50vw
@@ -146,3 +155,4 @@
 
         &__titulo
             font-size: 2rem   
+            margin-left: 2rem

@@ -6,7 +6,6 @@ const gapWidth = 12
 export default function cargaProyectos(PATH){
     let flagBreakpoint = false
     let mobile = window.innerWidth > 992 ? 1 : window.innerWidth > 576 ? 2 : 3
-    console.log(mobile)
     const flechasHTML = `
         <img src="./assets/icons/carrousel_arrow-l.svg" alt="izquierda" class="miPortfolio__flecha miPortfolio__flecha--izquierda">
         <img src="./assets/icons/carrousel_arrow-r.svg" alt="derecha" class="miPortfolio__flecha miPortfolio__flecha--derecha">`
@@ -69,19 +68,19 @@ async function llamadaDatos(PATH) {
         return json
     }
 
-    throw new Error(repsuesta.status)
+    throw new Error(respuesta.status)
 }
 
 function renderizadoDeProyectos(proyectos) {
     const cuerpoPortfolio = document.querySelector('.miPortfolio__cuerpo')
     
     proyectos.forEach((proyecto, indice) => {
+        setTimeout(() => {
         const card = crearCardProyecto(proyecto, indice)        
         card.style.opacity = "0"
         cuerpoPortfolio.append(card)     
-        setTimeout(() => {
             setTimeout(() => {
-            card.style.opacity = "1"
+                card.style.opacity = "1"
             }, 100)
         },400*indice)
     });
