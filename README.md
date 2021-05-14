@@ -21,12 +21,8 @@ El deploy del sitio se realizó en VERCEL, basta con acceder al mismo desde el G
 
 ## Autores ✒️
 
-* **Ariana Elhorn** - *Diseño* - [villanuevand](https://github.com/villanuevand)
-* **Juana Rueda** - *Diseño* - [fulanitodetal](#fulanito-de-tal)
-* **Marcelo Muotri** - *Desarrollo* -
-* **Agustín Andreacchi** - *Desarrollo* - 
-
-## Licencia 📄
-
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+* **Ariana Elhom** - *Diseño*
+* **Juana Rueda** - *Diseño*
+* **Marcelo Muotri** - *Desarrollo*
+* **Agustín Andreacchi** - *Desarrollo*
 
