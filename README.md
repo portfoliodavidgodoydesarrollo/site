@@ -22,7 +22,7 @@ El deploy del sitio se realizó en VERCEL, basta con acceder al mismo desde el G
 ## Autores ✒️
 
 * **Ariana Elhom** - *Diseño*
-* **Juana Rueda** - *Diseño*
+* **Juanita Rueda** - *Diseño*
 * **Marcelo Muotri** - *Desarrollo*
 * **Agustín Andreacchi** - *Desarrollo*
 
