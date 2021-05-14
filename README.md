@@ -1,6 +1,7 @@
 # Portfolio David Godoy Web Developer
 
-Se desarrolló el portfolio de David, en busca de un diseño moderno e interactivo, en respuesta a la perspectiva que él pudo describir respecto a su idea de proyecto y de carrera. Se buscó la forma de generar dinamismo en las secciones y acciones con las que el sitio debía cumplir, sin descuidar el óptimo mantenimiento y personalización del mismo.
+El desarrollo del portfolio de David se llevó a cabo haciendo foco en la creación de un diseño moderno, minimalista e interactivo en respuesta a su proyección de carrera y visión de futuro.
+Cada sección fue pensada con la finalidad  de ofrecer dinamismo a los usuarios y asegurar el cumplimiento de las  acciones y funcionalidades que proporcionan un sitio óptimo, personalizado y de fácil mantenimiento.
 
 ## Personalización ⚙️
 
